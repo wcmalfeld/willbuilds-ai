@@ -1,0 +1,187 @@
+/* ============================================================
+   WILLBUILDS.AI — plain-white, old-school terminal theme
+   ============================================================ */
+
+:root {
+  --bg:      #FFFFFF;
+  --ink:     #111111;
+  --muted:   #6B6B6B;
+  --border:  #111111;
+  --border-soft: #D8D8D8;
+  --green:   #0B8A3D;   /* readable terminal green on white */
+  --green-bright: #14A44D;
+
+  --f-mono: 'IBM Plex Mono', ui-monospace, 'Courier New', monospace;
+  --f-crt:  'VT323', var(--f-mono);
+
+  --wrap: 880px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--f-mono);
+  font-size: 15.5px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+a { color: var(--green); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+/* ---------- nav ---------- */
+.topbar {
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+}
+.topbar .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.prompt-logo {
+  font-weight: 500;
+  white-space: nowrap;
+}
+.prompt-logo .user { color: var(--ink); }
+.prompt-logo .at { color: var(--muted); }
+.prompt-logo .host { color: var(--green); }
+.prompt-logo .sep { color: var(--muted); }
+
+.topnav {
+  display: flex;
+  gap: 22px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+.topnav a { color: var(--ink); }
+.topnav a::before { content: './'; color: var(--muted); }
+.topnav a:hover { color: var(--green); text-decoration: none; border-bottom: 1px solid var(--green); }
+
+/* ---------- terminal window chrome ---------- */
+.term {
+  border: 1px solid var(--border);
+  margin: 48px 0;
+  background: var(--bg);
+}
+.term-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--border);
+}
+.term-dot { width: 10px; height: 10px; border-radius: 50%; border: 1px solid var(--border); background: var(--bg); }
+.term-title {
+  margin-left: 8px;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.term-body { padding: 22px 24px 26px; }
+.term-line { margin: 0 0 6px; white-space: pre-wrap; word-break: break-word; }
+.term-line:last-child { margin-bottom: 0; }
+.term-prompt { color: var(--green); }
+.term-out { color: var(--ink); }
+.term-comment { color: var(--muted); }
+
+.cursor {
+  display: inline-block;
+  width: 9px;
+  height: 1em;
+  background: var(--green);
+  vertical-align: text-bottom;
+  animation: blink 1s steps(1) infinite;
+  margin-left: 2px;
+}
+@keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+
+/* ---------- section headers ---------- */
+.sect { padding: 20px 0 56px; }
+.sect-head {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0 0 22px;
+}
+.sect-head .green { color: var(--green); }
+
+/* ---------- project listing ---------- */
+.proj-list { border-top: 1px solid var(--border); }
+.proj {
+  border-bottom: 1px solid var(--border-soft);
+  padding: 26px 0;
+}
+.proj:last-child { border-bottom: 1px solid var(--border); }
+
+.proj-name {
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+.proj-name .glyph { color: var(--green); margin-right: 8px; }
+.proj-name .ext { color: var(--muted); font-weight: 400; }
+
+.proj-desc {
+  color: var(--ink);
+  margin: 0 0 12px;
+  max-width: 640px;
+}
+
+.proj-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  align-items: center;
+  font-size: 13px;
+}
+.tag {
+  color: var(--green);
+}
+.tag::before { content: '--'; color: var(--muted); }
+.status {
+  color: var(--muted);
+}
+.proj-link {
+  color: var(--green);
+}
+.proj-link::after { content: ' →'; }
+
+/* ---------- about blurb ---------- */
+.about-block { max-width: 640px; }
+.about-block p { margin: 0 0 16px; }
+.about-block p:last-child { margin-bottom: 0; }
+
+/* ---------- footer ---------- */
+footer.term-footer {
+  border-top: 1px solid var(--border);
+  padding: 36px 0 48px;
+}
+.footer-lines { font-size: 14px; }
+.footer-lines .term-line { color: var(--ink); }
+.footer-lines a { color: var(--green); }
+.footer-note {
+  color: var(--muted);
+  font-size: 12.5px;
+  margin-top: 22px;
+}

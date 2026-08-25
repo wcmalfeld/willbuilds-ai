@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>willbuilds.ai — software by Will Malfeld</title>
+<meta name="description" content="Small software tools built to solve specific problems — by Will Malfeld.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="wrap">
+    <span class="prompt-logo"><span class="user">will</span><span class="at">@</span><span class="host">builds</span><span class="sep">:~$</span></span>
+    <ul class="topnav">
+      <li><a href="#about">about</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <div class="term" id="about">
+    <div class="term-bar">
+      <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
+      <span class="term-title">will@builds — 80x24</span>
+    </div>
+    <div class="term-body">
+      <p class="term-line"><span class="term-prompt">$</span> whoami</p>
+      <p class="term-line term-out">will malfeld — software engineer &amp; educator</p>
+      <p class="term-line"><span class="term-prompt">$</span> cat about.txt</p>
+      <p class="term-line term-out">I build small tools that solve specific problems in my</p>
+      <p class="term-line term-out">own life — then ship them so other people can use them too.</p>
+      <p class="term-line"><span class="term-comment"># see willmalfeld.com for the full background</span></p>
+      <p class="term-line"><span class="term-prompt">$</span> <span class="cursor" aria-hidden="true"></span></p>
+    </div>
+  </div>
+
+  <section class="sect" id="projects">
+    <p class="sect-head"><span class="green">$</span> ls ./projects</p>
+
+    <div class="proj-list">
+
+      <article class="proj">
+        <h3 class="proj-name"><span class="glyph">&gt;</span>search-and-rescue-debrief<span class="ext">.app</span></h3>
+        <p class="proj-desc">Gathers and summarizes findings from numerous team members after a search mission, matching up debrief notes across the team to produce one accurate, consolidated summary of what happened.</p>
+        <div class="proj-meta">
+          <span class="tag">ai-summarization</span>
+          <span class="tag">search-and-rescue</span>
+          <span class="tag">automation</span>
+          <span class="status">status: live</span>
+        </div>
+      </article>
+
+      <article class="proj">
+        <h3 class="proj-name"><span class="glyph">&gt;</span>mentor-update-letter-helper<span class="ext">.app</span></h3>
+        <p class="proj-desc">Turns the notes I take on a student throughout the week into a casual, informative update letter for parents — covering academics, social growth, and athletics — without me rewriting it from scratch every Friday.</p>
+        <div class="proj-meta">
+          <span class="tag">ai-writing</span>
+          <span class="tag">education</span>
+          <span class="tag">workflow-automation</span>
+          <span class="status">status: live</span>
+        </div>
+      </article>
+
+      <article class="proj">
+        <h3 class="proj-name"><span class="glyph">&gt;</span>used-bicycle-verification<span class="ext">.app</span></h3>
+        <p class="proj-desc">Uses blockchain technology to continuously verify transactions in the used bicycle market, so buyers and sellers can trust a bike's ownership and sale history.</p>
+        <div class="proj-meta">
+          <span class="tag">blockchain</span>
+          <span class="tag">verification</span>
+          <span class="tag">marketplace</span>
+          <span class="status">status: in development</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="term-footer" id="contact">
+  <div class="wrap">
+    <div class="footer-lines">
+      <p class="term-line"><span class="term-prompt">$</span> contact --email <a href="mailto:wcmalfeld@gmail.com">wcmalfeld@gmail.com</a></p>
+      <p class="term-line"><span class="term-prompt">$</span> contact --linkedin <a href="https://linkedin.com/in/william-malfeld-683378200" target="_blank" rel="noopener">linkedin.com/in/william-malfeld</a></p>
+      <p class="term-line"><span class="term-prompt">$</span> contact --about <a href="https://willmalfeld.com">willmalfeld.com</a></p>
+    </div>
+    <p class="footer-note"># willbuilds.ai — built &amp; maintained by Will Malfeld</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
