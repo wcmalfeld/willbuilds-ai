@@ -167,6 +167,34 @@ a:focus-visible, button:focus-visible {
 }
 .proj-link::after { content: ' →'; }
 
+/* ---------- project categories ---------- */
+.proj-category {
+  margin: 40px 0 14px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.proj-category .green { color: var(--green); }
+
+/* ---------- project media (screenshot) ---------- */
+.proj-media { margin: 0 0 14px; max-width: 480px; }
+.proj-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+}
+.proj-img-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 9;
+  border: 1px dashed var(--border-soft);
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+  padding: 16px;
+}
+
 /* ---------- about blurb ---------- */
 .about-block { max-width: 640px; }
 .about-block p { margin: 0 0 16px; }
