@@ -1,0 +1,27 @@
+{
+  "name": "Will Malfeld",
+  "role": "software engineer & educator",
+  "description": "Small software tools built to solve specific problems — by Will Malfeld.",
+  "intro": [
+    "I build small tools that solve specific problems in my",
+    "own life — then ship them so other people can use them too."
+  ],
+  "about": [
+    "I'm Will Malfeld, a software engineer and educator.",
+    "I build small tools that solve specific problems in my own life — then ship them so other people can use them too. A lot of them come out of teaching and tutoring math and physics.",
+    "For my full background, see willmalfeld.com."
+  ],
+  "skills": [],
+  "interests": [],
+  "email": "wcmalfeld@gmail.com",
+  "links": [
+    { "flag": "--about", "url": "https://willmalfeld.com", "text": "willmalfeld.com" },
+    { "flag": "--linkedin", "url": "https://www.linkedin.com/in/will-malfeld-683378200/", "text": "linkedin.com/in/will-malfeld-683378200" },
+    { "flag": "--github", "url": "https://github.com/wcmalfeld", "text": "github.com/wcmalfeld" }
+  ],
+  "sections": {
+    "projects": "Working software I've built: tools, games and apps, each with an honest status.",
+    "lab": "Prototypes and experiments — ideas with a working implementation that aren't finished products yet.",
+    "notes": "Writing on building software, AI and teaching."
+  }
+}
