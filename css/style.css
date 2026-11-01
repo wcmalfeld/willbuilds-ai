@@ -379,6 +379,22 @@ img { max-width: 100%; }
 .status--prototype .status-mark,
 .status--experimental .status-mark { border-style: dashed; }
 
+/* ---------- groups within a listing ---------- */
+.proj-group + .proj-group { margin-top: var(--space-7); }
+.group-head { margin: 0 0 var(--space-4); }
+.group-title {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0 0 var(--space-2);
+}
+.group-title .hash { color: var(--color-accent); }
+.group-blurb {
+  max-width: var(--measure);
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
 /* ---------- listing tools ---------- */
 .list-tools { margin: 0 0 var(--space-4); }
 .search {

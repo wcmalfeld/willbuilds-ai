@@ -19,6 +19,21 @@
     { "flag": "--linkedin", "url": "https://www.linkedin.com/in/will-malfeld-683378200/", "text": "linkedin.com/in/will-malfeld-683378200" },
     { "flag": "--github", "url": "https://github.com/wcmalfeld", "text": "github.com/wcmalfeld" }
   ],
+  "groups": {
+    "projects": [
+      {
+        "key": "mathlete",
+        "title": "Mathlete learning tools",
+        "blurb": "Interactive math games I built for Mathlete MTB, my math and physics tutoring for young athletes. Each one puts students in a mountain-bike scenario and runs at six levels, from Algebra I through Calculus.",
+        "link": { "url": "https://wcmalfeld.github.io/MathleteMTB-Site/", "text": "about mathlete mtb" }
+      },
+      {
+        "key": "personal-assistant",
+        "title": "Personal assistant tools",
+        "blurb": "Tools I built to plan and run my own days."
+      }
+    ]
+  },
   "sections": {
     "projects": "Working software I've built: tools, games and apps, each with an honest status.",
     "lab": "Prototypes and experiments — ideas with a working implementation that aren't finished products yet.",

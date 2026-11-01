@@ -33,6 +33,8 @@ const SECTIONS = {
   lab: { title: 'Lab', noun: ['experiment', 'experiments'] },
 };
 const inSection = (key) => projects.filter((p) => p.category === key);
+// A section with nothing in it gets no page, nav link or homepage link.
+const shown = (key) => (key === 'notes' ? notes.length > 0 : inSection(key).length > 0);
 
 /* ---------- build ---------- */
 
@@ -40,7 +42,7 @@ for (const dir of GENERATED_DIRS) rmSync(join(ROOT, dir), { recursive: true, for
 
 const pages = [];
 emit('', homePage());
-for (const key of Object.keys(SECTIONS)) {
+for (const key of Object.keys(SECTIONS).filter(shown)) {
   emit(`${key}/`, listingPage(key));
   for (const p of inSection(key)) emit(`${key}/${p.slug}/`, projectPage(p));
 }
@@ -73,8 +75,8 @@ function homePage() {
       <p class="term-line"><span class="term-prompt" aria-hidden="true">$</span> cat about.txt</p>
 ${site.intro.map((l) => `      <p class="term-line term-out">${esc(l)}</p>`).join('\n')}
       <div class="term-actions">
-        <a class="btn btn--primary" href="projects/">explore projects →</a>
-        <a class="btn" href="lab/">visit the lab →</a>${notes.length ? `
+        <a class="btn btn--primary" href="projects/">explore projects →</a>${shown('lab') ? `
+        <a class="btn" href="lab/">visit the lab →</a>` : ''}${notes.length ? `
         <a class="btn" href="notes/">read notes →</a>` : ''}
       </div>
       <p class="term-line"><span class="term-prompt" aria-hidden="true">$</span> <span class="cursor" aria-hidden="true"></span></p>
@@ -87,8 +89,8 @@ ${picks.length ? `
 ${picks.map((p) => projectRow(p, r, 'h3')).join('\n')}
     </ul>
     <p class="sect-more">
-      <a href="projects/">all projects (${inSection('projects').length}) →</a>
-      <a href="lab/">lab experiments (${inSection('lab').length}) →</a>
+      <a href="projects/">all projects (${inSection('projects').length}) →</a>${shown('lab') ? `
+      <a href="lab/">lab experiments (${inSection('lab').length}) →</a>` : ''}
     </p>
   </section>` : ''}
 ${recent.length ? `
@@ -116,10 +118,33 @@ function listingPage(key) {
   const r = rel(path);
   const { title, noun } = SECTIONS[key];
   const items = inSection(key);
-  // Only offer a tag as a filter when it narrows the list to more than one item.
+  const groups = site.groups?.[key];
+  const members = (match) => items.filter(match).map((p) => p.slug).join();
+  // Only offer a tag as a filter when it narrows the list to more than one
+  // item, and doesn't just repeat a group that's already its own heading.
+  const groupSets = (groups || []).map((g) => members((p) => p.group === g.key));
   const counts = {};
   items.forEach((p) => p.tags.forEach((t) => (counts[t] = (counts[t] || 0) + 1)));
-  const filterTags = Object.keys(counts).filter((t) => counts[t] > 1 && counts[t] < items.length).sort();
+  const filterTags = Object.keys(counts)
+    .filter((t) => counts[t] > 1 && counts[t] < items.length && !groupSets.includes(members((p) => p.tags.includes(t))))
+    .sort();
+  const list = groups
+    ? groups.map((g) => {
+        const rows = items.filter((p) => p.group === g.key);
+        if (!rows.length) return '';
+        return `    <section class="proj-group" data-group aria-labelledby="group-${g.key}">
+      <div class="group-head">
+        <h2 class="group-title" id="group-${g.key}"><span class="hash" aria-hidden="true"># </span>${esc(g.title)}</h2>${g.blurb ? `
+        <p class="group-blurb">${esc(g.blurb)}${g.link ? ` <a href="${esc(g.link.url)}" target="_blank" rel="noopener">${esc(g.link.text)} →</a>` : ''}</p>` : ''}
+      </div>
+      <ul class="proj-list">
+${rows.map((p) => projectRow(p, r, 'h3')).join('\n')}
+      </ul>
+    </section>`;
+      }).join('\n')
+    : `    <ul class="proj-list">
+${items.map((p) => projectRow(p, r, 'h2')).join('\n')}
+    </ul>`;
   const body = `
   ${pageHead(r, [[key]], title, site.sections[key])}
   <section class="listing" data-listing data-noun="${noun[0]}" data-nouns="${noun[1]}" aria-label="${esc(title)}">
@@ -135,9 +160,7 @@ ${filterTags.map((t) => `        <button class="chip" type="button" data-tag="${
       </div>` : ''}
     </div>
     <p class="list-count" data-count aria-live="polite">${plural(items.length, noun)}</p>
-    <ul class="proj-list">
-${items.map((p) => projectRow(p, r, 'h2')).join('\n')}
-    </ul>
+${list}
     <div class="empty" data-empty hidden>
       <p>No ${noun[1]} match that search.</p>
       <button class="btn btn--small" type="button" data-reset>clear search and filters</button>
@@ -242,8 +265,8 @@ function notFoundPage() {
       <p class="term-line term-comment"># the page may have moved when the site was reorganized</p>
       <div class="term-actions">
         <a class="btn btn--primary" href="${r}">go home →</a>
-        <a class="btn" href="${r}projects/">projects →</a>
-        <a class="btn" href="${r}lab/">lab →</a>
+        <a class="btn" href="${r}projects/">projects →</a>${shown('lab') ? `
+        <a class="btn" href="${r}lab/">lab →</a>` : ''}
       </div>
     </div>
   </section>`;
@@ -263,7 +286,7 @@ ${pages.map((p) => `  <url><loc>${SITE_URL}${p}</loc></url>`).join('\n')}
 function shell({ path, root, title, description, active, image, head = '', body, noindex = false }) {
   const r = root ?? rel(path);
   const home = r || './';
-  const nav = [['projects'], ['lab'], notes.length && ['notes'], ['about']].filter(Boolean).map(([key]) => {
+  const nav = [['projects'], shown('lab') && ['lab'], shown('notes') && ['notes'], ['about']].filter(Boolean).map(([key]) => {
     const current = path === `${key}/` ? ' aria-current="page"' : active === key ? ' aria-current="true"' : '';
     return `        <li><a href="${r}${key}/"${current}>${key}</a></li>`;
   });
@@ -346,7 +369,8 @@ function sectHead(id, cmd, title) {
 }
 
 function projectRow(p, r, h) {
-  const search = [p.title, p.description, ...p.tags, ...(p.technologies || [])].join(' ').toLowerCase();
+  const search = [p.title, p.description, ...p.tags, ...(p.technologies || []), ...(p.overview || []), ...(p.details || [])]
+    .join(' ').toLowerCase();
   return `      <li class="proj${p.thumbnail ? ' proj--thumb' : ''}" data-search="${esc(search)}" data-tags="${esc(p.tags.join(' '))}">
         <div class="proj-body">
           <${h} class="proj-name"><a class="proj-title" href="${r}${p.category}/${p.slug}/"><span class="glyph" aria-hidden="true">&gt;</span>${esc(p.title)}</a></${h}>
@@ -424,6 +448,10 @@ function validate() {
     seen.add(p.slug);
     if (!['projects', 'lab'].includes(p.category)) fail(`${where}: category must be "projects" or "lab"`);
     if (!STATUS[p.status]) fail(`${where}: status must be one of ${Object.keys(STATUS).join(', ')}`);
+    const groups = site.groups?.[p.category];
+    if (groups && !groups.some((g) => g.key === p.group)) {
+      fail(`${where}: "group" must be one of ${groups.map((g) => g.key).join(', ')} (set in content/site.json)`);
+    }
     if (p.thumbnail && !existsSync(join(ROOT, p.thumbnail))) fail(`${where}: thumbnail ${p.thumbnail} not found`);
     p.tags ||= [];
   });

@@ -31,6 +31,9 @@ document.querySelectorAll('[data-listing]').forEach((listing) => {
       : `${shown} of ${total} ${nouns} shown`;
     clear.hidden = !input.value;
     empty.hidden = shown > 0;
+    listing.querySelectorAll('[data-group]').forEach((g) => {
+      g.hidden = !g.querySelector('[data-search]:not([hidden])');
+    });
   }
 
   function setTag(tag) {

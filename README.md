@@ -39,7 +39,7 @@ projects/  lab/  about/  notes/
 | Page | What goes there |
 |---|---|
 | **Projects** (`/projects/`) | Working software: tools, games and apps people can use or that are substantially built |
-| **Lab** (`/lab/`) | Prototypes and experiments that aren't finished products yet |
+| **Lab** (`/lab/`) | Prototypes and experiments that aren't finished products yet. Hidden from the nav and homepage while empty |
 | **Notes** (`/notes/`) | Writing. Hidden from the nav and homepage until the first note exists |
 | **About** (`/about/`) | Who I am, plus links |
 
@@ -54,6 +54,7 @@ Add a record to `content/projects.json` and run `node build.mjs`. Required field
 | `slug` | lowercase-with-dashes; becomes the URL, e.g. `/projects/my-tool/` |
 | `title` | Display name |
 | `category` | `projects` or `lab` |
+| `group` | Required when the category has groups. Projects are split into `mathlete` (Mathlete learning tools) and `personal-assistant` (personal assistant tools); groups, their headings and blurbs are defined under `groups` in `content/site.json` |
 | `status` | `live`, `in-development`, `prototype`, `experimental`, `paused` or `archived` |
 | `description` | One or two sentences, shown in lists |
 

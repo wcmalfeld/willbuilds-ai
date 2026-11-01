@@ -1,26 +1,80 @@
 [
   {
-    "slug": "summit-expedition-game",
-    "title": "Summit Expedition",
+    "slug": "gear-ratio-lab",
+    "title": "Gear Ratio Lab",
     "category": "projects",
-    "status": "in-development",
-    "featured": true,
-    "description": "An online board game for math tutoring: students race up Mt. Axiom by solving problems at the difficulty they choose, and wrong answers never send anyone backward.",
+    "group": "mathlete",
+    "status": "live",
+    "description": "A race-mechanic game: students choose a chainring, wheel and cogs for each section of a mountain-bike course, work out the ratios, speeds and times, then race their setup against a rival's.",
     "overview": [
-      "Summit Expedition is an online board game for math tutoring where students race to climb Mt. Axiom by solving math problems. On each turn a player rolls a die, then chooses how hard a problem to take on: Safe, Bold or Daring. Harder problems move them farther up the trail when answered correctly. Wrong answers never send anyone backward. The student sees a worked solution and earns insight tokens that trade for power-up cards, such as a hint or a second try. Along the way there are supply caches, weather events, camps, and a risky Ice Ridge shortcut guarded by an Ice Wall.",
-      "Tutors choose which topics are in play, from Algebra 1 through Calculus, and problems are generated fresh each time. The difficulty adjusts quietly to how the student is doing. Tutor tools let you override answers, give retries or change topics mid-game. A session report at the end shows each student’s accuracy by skill and every problem they missed. Up to four players can climb, including the tutor, and it works over screen-share for online sessions anywhere."
+      "Students play the mechanic for a mountain-bike racer. Each course section lists its grade, the rider's cadence and a push limit — the biggest gear ratio the rider can turn there. Go over it and the rider walks; every cog change costs time. Students work the numbers for every section, race their setup against a rival's on the course profile, then change one part, predict the new time and test the prediction.",
+      "The same game runs at six levels: Algebra I (ratios, rates, inequalities), Geometry (circumference, gear inches), Algebra II (inverse variation, constraints), Precalculus (angular velocity), Statistics (percent steps, spread) and Calculus (related rates)."
     ],
-    "tags": ["education", "game", "tutoring"],
-    "technologies": ["JavaScript", "MathJax", "math.js"],
-    "thumbnail": "images/summit-expedition-game.png",
-    "thumbnailAlt": "Summit Expedition Game screenshot",
-    "liveUrl": "https://wcmalfeld.github.io/Summit-Expedition---Mathlete/",
-    "sourceUrl": "https://github.com/wcmalfeld/Summit-Expedition---Mathlete"
+    "details": [
+      "Spec — pick a race course.",
+      "Plan — choose a chainring, a wheel and one rear cog per section.",
+      "Lab — work out the ratio, distance per crank turn, speed and time for every section, plus one problem for the class.",
+      "Race — the setup races the rival's on the course profile.",
+      "Tune — change one part, predict the new time, test it, and answer the mechanic's question."
+    ],
+    "tags": ["education", "tutoring", "game", "mountain-biking"],
+    "thumbnail": "images/gear-ratio-lab.png",
+    "thumbnailAlt": "Gear Ratio Lab: choosing a math class and a race course on the mechanic's bench",
+    "liveUrl": "https://wcmalfeld.github.io/GearRatioLab_LearningTool/",
+    "sourceUrl": "https://github.com/wcmalfeld/GearRatioLab_LearningTool"
+  },
+  {
+    "slug": "strava-showdown",
+    "title": "Strava Showdown",
+    "category": "projects",
+    "group": "mathlete",
+    "status": "live",
+    "description": "A race-analyst game: students call the podium from a field of riders' ride data, crunch each rider's stats, plot them on a distance–time graph, and defend their final call with numbers.",
+    "overview": [
+      "Students sit at the race analyst's desk for a mountain-bike team. They're dealt a field of riders and a brief saying what the team is selecting for, lock in a podium prediction before doing any math, then compute each rider's stats and plot every rider on a distance–time graph, where slope is speed. The round ends with the coach's question, answered with numbers and the graph, and a final podium.",
+      "The same game runs at six levels: Algebra I (rates, d = rt, systems), Geometry (coordinate distance), Algebra II (means of rates), Precalculus (average rate of change), Statistics (spread and z-scores) and Calculus (integrals and the Mean Value Theorem)."
+    ],
+    "details": [
+      "Deal — a field of riders and a race brief.",
+      "Call it — predict the podium before any math; it locks in.",
+      "Crunch — compute each rider's stats on the analyst sheet, plus one problem for the class.",
+      "Plot — plot each rider on a distance–time graph.",
+      "Showdown — answer the coach's question with numbers and the graph, then give the final podium."
+    ],
+    "tags": ["education", "tutoring", "game", "mountain-biking"],
+    "thumbnail": "images/strava-showdown.png",
+    "thumbnailAlt": "Strava Showdown: choosing a math class and a race field at the analyst's desk",
+    "liveUrl": "https://wcmalfeld.github.io/StravaShowdown_LearningTool/",
+    "sourceUrl": "https://github.com/wcmalfeld/StravaShowdown_LearningTool"
+  },
+  {
+    "slug": "trail-builder",
+    "title": "Trail Builder",
+    "category": "projects",
+    "group": "mathlete",
+    "status": "live",
+    "description": "A trail-crew game: students take a client's work order, solve the math for every trail segment they build, and have to land exactly on the finish elevation within budget.",
+    "overview": [
+      "Students run a trail crew building real-world-inspired trails in New Zealand, Chile, Scotland, Canada and Tasmania. A client sets the budget, the trailhead elevation and where the trail must finish. Every segment bought from the shop needs its math solved before it goes in, then a test rider rides the finished trail — and flats and washouts cost money.",
+      "The same game runs at six levels: Algebra I (linear models and inequalities), Geometry (right triangles and the Pythagorean theorem), Algebra II (quadratics, exponentials, logs), Precalculus (trigonometry and angles), Statistics (probability and expected value) and Calculus (derivatives and integrals)."
+    ],
+    "details": [
+      "Survey — take a work order with a budget, a trailhead elevation and a finish.",
+      "Build — buy segments and solve the math for each one; the trail must end exactly at the finish elevation.",
+      "Ride — a test rider rolls the die on every segment rated 3 or higher.",
+      "Review — score up to 100 points plus a bonus, name the trail, explain why it works, and add it to the trail network."
+    ],
+    "tags": ["education", "tutoring", "game", "mountain-biking"],
+    "thumbnail": "images/trail-builder.png",
+    "thumbnailAlt": "Trail Builder: choosing a math class, a destination and a client work order",
+    "liveUrl": "https://wcmalfeld.github.io/TrailBuilder_Math/",
+    "sourceUrl": "https://github.com/wcmalfeld/TrailBuilder_Math"
   },
   {
     "slug": "leverage-planner",
     "title": "Leverage Planner",
     "category": "projects",
+    "group": "personal-assistant",
     "status": "in-development",
     "featured": true,
     "description": "A local-first planner that ranks what I could be doing by leverage against my own goals, then fits the best of it into my real day.",
@@ -40,55 +94,5 @@
     "thumbnailAlt": "Leverage Planner Today view showing the three highest-leverage actions for the day",
     "liveUrl": "https://wcmalfeld.github.io/leverage-planner/",
     "sourceUrl": "https://github.com/wcmalfeld/leverage-planner"
-  },
-  {
-    "slug": "search-and-rescue-debrief",
-    "title": "Search and Rescue Debrief",
-    "category": "projects",
-    "status": "in-development",
-    "description": "Gathers and summarizes findings from numerous team members after a search mission, matching up debrief notes across the team to produce one accurate, consolidated summary of what happened.",
-    "overview": [
-      "Each volunteer submits their own account of a mission through a structured questionnaire. Once every expected volunteer has submitted, the mission is ready for an AI-generated consensus debrief that reconciles where accounts agree and flags discrepancies for a mission lead to review."
-    ],
-    "details": [
-      "Built so far: the data model, a shared questionnaire schema, mission creation, and the volunteer submission flow with automatic status tracking.",
-      "Next: AI consensus generation with the Claude API."
-    ],
-    "tags": ["ai-summarization", "search-and-rescue", "automation"],
-    "technologies": ["Node.js", "Express", "SQLite"],
-    "sourceUrl": "https://github.com/wcmalfeld/SAR"
-  },
-  {
-    "slug": "mentor-update-letter-helper",
-    "title": "Mentor Update Letter Helper",
-    "category": "projects",
-    "status": "live",
-    "description": "Turns the notes I take on a student throughout the week into a casual, informative update letter for parents — covering academics, social growth, and athletics — without me rewriting it from scratch every Friday.",
-    "tags": ["ai-writing", "education", "workflow-automation"]
-  },
-  {
-    "slug": "lesson-differentiation-engine",
-    "title": "Lesson Differentiation Engine",
-    "category": "lab",
-    "status": "prototype",
-    "featured": true,
-    "description": "A tool that takes a math or physics objective plus a real student's profile and has Claude generate three genuinely different lessons for it live, each with the learning-science reasoning behind it.",
-    "problem": "Some students can't be reached by a lesson written for “the average student”, and differentiation is the answer — but writing one genuinely different version of a lesson, grounded in real learning science, can take longer than writing the original. Most teachers end up differentiating by instinct, without the bandwidth to do it well for more than one or two students at a time.",
-    "solution": "Give the engine a real math or physics objective and a student profile, and Claude generates three structurally different instructional pathways live — each with a margin note explaining why it fits that student, grounded in executive-function and UDL research. The teacher still picks, adapts and knows the kid; the tool does the first draft of the reasoning.",
-    "details": [
-      "The interface is drawn like a technical blueprint, because a lesson plan is an engineering problem: a fixed objective, real constraints, and a structure that gets from one to the other.",
-      "Next ideas: saving and editing pathways into a lesson library, a “why not” mode that names the approaches it avoided, and batching several students for one class period."
-    ],
-    "tags": ["ai", "education", "workflow-automation"],
-    "technologies": ["Claude API", "JavaScript"],
-    "sourceUrl": "https://github.com/wcmalfeld/Lesson-Differentiation"
-  },
-  {
-    "slug": "used-bicycle-verification",
-    "title": "Used Bicycle Verification",
-    "category": "lab",
-    "status": "in-development",
-    "description": "Uses blockchain technology to continuously verify transactions in the used bicycle market, so buyers and sellers can trust a bike's ownership and sale history.",
-    "tags": ["blockchain", "verification", "marketplace"]
   }
 ]

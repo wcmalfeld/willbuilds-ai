@@ -26,7 +26,6 @@
     <nav aria-label="Primary">
       <ul class="topnav">
         <li><a href="../projects/" aria-current="page">projects</a></li>
-        <li><a href="../lab/">lab</a></li>
         <li><a href="../about/">about</a></li>
       </ul>
     </nav>
@@ -47,44 +46,56 @@
         <input class="search-input" id="q-projects" type="search" placeholder="search projects…" autocomplete="off" spellcheck="false" data-query>
         <button class="btn btn--small" type="button" data-clear hidden>clear</button>
       </div>
-      <div class="filters" role="group" aria-label="Filter by tag">
-        <button class="chip" type="button" data-tag="" aria-pressed="true">all</button>
-        <button class="chip" type="button" data-tag="education" aria-pressed="false">education</button>
-      </div>
     </div>
     <p class="list-count" data-count aria-live="polite">4 projects</p>
-    <ul class="proj-list">
-      <li class="proj proj--thumb" data-search="summit expedition an online board game for math tutoring: students race up mt. axiom by solving problems at the difficulty they choose, and wrong answers never send anyone backward. education game tutoring javascript mathjax math.js" data-tags="education game tutoring">
+    <section class="proj-group" data-group aria-labelledby="group-mathlete">
+      <div class="group-head">
+        <h2 class="group-title" id="group-mathlete"><span class="hash" aria-hidden="true"># </span>Mathlete learning tools</h2>
+        <p class="group-blurb">Interactive math games I built for Mathlete MTB, my math and physics tutoring for young athletes. Each one puts students in a mountain-bike scenario and runs at six levels, from Algebra I through Calculus. <a href="https://wcmalfeld.github.io/MathleteMTB-Site/" target="_blank" rel="noopener">about mathlete mtb →</a></p>
+      </div>
+      <ul class="proj-list">
+      <li class="proj proj--thumb" data-search="gear ratio lab a race-mechanic game: students choose a chainring, wheel and cogs for each section of a mountain-bike course, work out the ratios, speeds and times, then race their setup against a rival's. education tutoring game mountain-biking students play the mechanic for a mountain-bike racer. each course section lists its grade, the rider's cadence and a push limit — the biggest gear ratio the rider can turn there. go over it and the rider walks; every cog change costs time. students work the numbers for every section, race their setup against a rival's on the course profile, then change one part, predict the new time and test the prediction. the same game runs at six levels: algebra i (ratios, rates, inequalities), geometry (circumference, gear inches), algebra ii (inverse variation, constraints), precalculus (angular velocity), statistics (percent steps, spread) and calculus (related rates). spec — pick a race course. plan — choose a chainring, a wheel and one rear cog per section. lab — work out the ratio, distance per crank turn, speed and time for every section, plus one problem for the class. race — the setup races the rival's on the course profile. tune — change one part, predict the new time, test it, and answer the mechanic's question." data-tags="education tutoring game mountain-biking">
         <div class="proj-body">
-          <h2 class="proj-name"><a class="proj-title" href="../projects/summit-expedition-game/"><span class="glyph" aria-hidden="true">&gt;</span>Summit Expedition</a></h2>
-          <p class="proj-desc">An online board game for math tutoring: students race up Mt. Axiom by solving problems at the difficulty they choose, and wrong answers never send anyone backward.</p>
-          <div class="proj-meta"><span class="status status--in-development"><span class="status-mark" aria-hidden="true"></span>status: in development</span><ul class="tags" aria-label="Tags"><li class="tag">education</li><li class="tag">game</li><li class="tag">tutoring</li></ul></div>
+          <h3 class="proj-name"><a class="proj-title" href="../projects/gear-ratio-lab/"><span class="glyph" aria-hidden="true">&gt;</span>Gear Ratio Lab</a></h3>
+          <p class="proj-desc">A race-mechanic game: students choose a chainring, wheel and cogs for each section of a mountain-bike course, work out the ratios, speeds and times, then race their setup against a rival's.</p>
+          <div class="proj-meta"><span class="status status--live"><span class="status-mark" aria-hidden="true"></span>status: live</span><ul class="tags" aria-label="Tags"><li class="tag">education</li><li class="tag">tutoring</li><li class="tag">game</li><li class="tag">mountain-biking</li></ul></div>
         </div>
-        <img class="proj-thumb" src="../images/summit-expedition-game.png" alt="" loading="lazy">
+        <img class="proj-thumb" src="../images/gear-ratio-lab.png" alt="" loading="lazy">
       </li>
-      <li class="proj proj--thumb" data-search="leverage planner a local-first planner that ranks what i could be doing by leverage against my own goals, then fits the best of it into my real day. productivity planning scheduling personal-development react typescript vite vitest" data-tags="productivity planning scheduling personal-development">
+      <li class="proj proj--thumb" data-search="strava showdown a race-analyst game: students call the podium from a field of riders' ride data, crunch each rider's stats, plot them on a distance–time graph, and defend their final call with numbers. education tutoring game mountain-biking students sit at the race analyst's desk for a mountain-bike team. they're dealt a field of riders and a brief saying what the team is selecting for, lock in a podium prediction before doing any math, then compute each rider's stats and plot every rider on a distance–time graph, where slope is speed. the round ends with the coach's question, answered with numbers and the graph, and a final podium. the same game runs at six levels: algebra i (rates, d = rt, systems), geometry (coordinate distance), algebra ii (means of rates), precalculus (average rate of change), statistics (spread and z-scores) and calculus (integrals and the mean value theorem). deal — a field of riders and a race brief. call it — predict the podium before any math; it locks in. crunch — compute each rider's stats on the analyst sheet, plus one problem for the class. plot — plot each rider on a distance–time graph. showdown — answer the coach's question with numbers and the graph, then give the final podium." data-tags="education tutoring game mountain-biking">
         <div class="proj-body">
-          <h2 class="proj-name"><a class="proj-title" href="../projects/leverage-planner/"><span class="glyph" aria-hidden="true">&gt;</span>Leverage Planner</a></h2>
+          <h3 class="proj-name"><a class="proj-title" href="../projects/strava-showdown/"><span class="glyph" aria-hidden="true">&gt;</span>Strava Showdown</a></h3>
+          <p class="proj-desc">A race-analyst game: students call the podium from a field of riders' ride data, crunch each rider's stats, plot them on a distance–time graph, and defend their final call with numbers.</p>
+          <div class="proj-meta"><span class="status status--live"><span class="status-mark" aria-hidden="true"></span>status: live</span><ul class="tags" aria-label="Tags"><li class="tag">education</li><li class="tag">tutoring</li><li class="tag">game</li><li class="tag">mountain-biking</li></ul></div>
+        </div>
+        <img class="proj-thumb" src="../images/strava-showdown.png" alt="" loading="lazy">
+      </li>
+      <li class="proj proj--thumb" data-search="trail builder a trail-crew game: students take a client's work order, solve the math for every trail segment they build, and have to land exactly on the finish elevation within budget. education tutoring game mountain-biking students run a trail crew building real-world-inspired trails in new zealand, chile, scotland, canada and tasmania. a client sets the budget, the trailhead elevation and where the trail must finish. every segment bought from the shop needs its math solved before it goes in, then a test rider rides the finished trail — and flats and washouts cost money. the same game runs at six levels: algebra i (linear models and inequalities), geometry (right triangles and the pythagorean theorem), algebra ii (quadratics, exponentials, logs), precalculus (trigonometry and angles), statistics (probability and expected value) and calculus (derivatives and integrals). survey — take a work order with a budget, a trailhead elevation and a finish. build — buy segments and solve the math for each one; the trail must end exactly at the finish elevation. ride — a test rider rolls the die on every segment rated 3 or higher. review — score up to 100 points plus a bonus, name the trail, explain why it works, and add it to the trail network." data-tags="education tutoring game mountain-biking">
+        <div class="proj-body">
+          <h3 class="proj-name"><a class="proj-title" href="../projects/trail-builder/"><span class="glyph" aria-hidden="true">&gt;</span>Trail Builder</a></h3>
+          <p class="proj-desc">A trail-crew game: students take a client's work order, solve the math for every trail segment they build, and have to land exactly on the finish elevation within budget.</p>
+          <div class="proj-meta"><span class="status status--live"><span class="status-mark" aria-hidden="true"></span>status: live</span><ul class="tags" aria-label="Tags"><li class="tag">education</li><li class="tag">tutoring</li><li class="tag">game</li><li class="tag">mountain-biking</li></ul></div>
+        </div>
+        <img class="proj-thumb" src="../images/trail-builder.png" alt="" loading="lazy">
+      </li>
+      </ul>
+    </section>
+    <section class="proj-group" data-group aria-labelledby="group-personal-assistant">
+      <div class="group-head">
+        <h2 class="group-title" id="group-personal-assistant"><span class="hash" aria-hidden="true"># </span>Personal assistant tools</h2>
+        <p class="group-blurb">Tools I built to plan and run my own days.</p>
+      </div>
+      <ul class="proj-list">
+      <li class="proj proj--thumb" data-search="leverage planner a local-first planner that ranks what i could be doing by leverage against my own goals, then fits the best of it into my real day. productivity planning scheduling personal-development react typescript vite vitest a local-first personal strategy engine. it ranks everything i could be doing by leverage against my own goals, fits the best of it into my real day with sleep, meals, training and people protected, and compares that plan with what i'd otherwise do. daily and weekly reviews feed back in, recalibrating time estimates and flagging when one goal is eating more than its share of the week. no accounts or api keys, and all data stays in the browser. an eight-factor weighted leverage score, with a plain-language explanation for every ranking. a scheduler that works around routine, commitments and travel, matches tasks to energy and focus windows, and stops before eating into requested open time. important tasks that don't fit come back with concrete fixes: postpone something lower-ranked, shorten, split or move to tomorrow. after three completed tasks per goal, actual-vs-estimate ratios recalibrate future durations. 55 unit tests cover the scoring, scheduling, comparison and review engine." data-tags="productivity planning scheduling personal-development">
+        <div class="proj-body">
+          <h3 class="proj-name"><a class="proj-title" href="../projects/leverage-planner/"><span class="glyph" aria-hidden="true">&gt;</span>Leverage Planner</a></h3>
           <p class="proj-desc">A local-first planner that ranks what I could be doing by leverage against my own goals, then fits the best of it into my real day.</p>
           <div class="proj-meta"><span class="status status--in-development"><span class="status-mark" aria-hidden="true"></span>status: in development</span><ul class="tags" aria-label="Tags"><li class="tag">productivity</li><li class="tag">planning</li><li class="tag">scheduling</li><li class="tag">personal-development</li></ul></div>
         </div>
         <img class="proj-thumb" src="../images/leverage-planner.png" alt="" loading="lazy">
       </li>
-      <li class="proj" data-search="search and rescue debrief gathers and summarizes findings from numerous team members after a search mission, matching up debrief notes across the team to produce one accurate, consolidated summary of what happened. ai-summarization search-and-rescue automation node.js express sqlite" data-tags="ai-summarization search-and-rescue automation">
-        <div class="proj-body">
-          <h2 class="proj-name"><a class="proj-title" href="../projects/search-and-rescue-debrief/"><span class="glyph" aria-hidden="true">&gt;</span>Search and Rescue Debrief</a></h2>
-          <p class="proj-desc">Gathers and summarizes findings from numerous team members after a search mission, matching up debrief notes across the team to produce one accurate, consolidated summary of what happened.</p>
-          <div class="proj-meta"><span class="status status--in-development"><span class="status-mark" aria-hidden="true"></span>status: in development</span><ul class="tags" aria-label="Tags"><li class="tag">ai-summarization</li><li class="tag">search-and-rescue</li><li class="tag">automation</li></ul></div>
-        </div>
-      </li>
-      <li class="proj" data-search="mentor update letter helper turns the notes i take on a student throughout the week into a casual, informative update letter for parents — covering academics, social growth, and athletics — without me rewriting it from scratch every friday. ai-writing education workflow-automation" data-tags="ai-writing education workflow-automation">
-        <div class="proj-body">
-          <h2 class="proj-name"><a class="proj-title" href="../projects/mentor-update-letter-helper/"><span class="glyph" aria-hidden="true">&gt;</span>Mentor Update Letter Helper</a></h2>
-          <p class="proj-desc">Turns the notes I take on a student throughout the week into a casual, informative update letter for parents — covering academics, social growth, and athletics — without me rewriting it from scratch every Friday.</p>
-          <div class="proj-meta"><span class="status status--live"><span class="status-mark" aria-hidden="true"></span>status: live</span><ul class="tags" aria-label="Tags"><li class="tag">ai-writing</li><li class="tag">education</li><li class="tag">workflow-automation</li></ul></div>
-        </div>
-      </li>
-    </ul>
+      </ul>
+    </section>
     <div class="empty" data-empty hidden>
       <p>No projects match that search.</p>
       <button class="btn btn--small" type="button" data-reset>clear search and filters</button>
