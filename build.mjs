@@ -103,7 +103,7 @@ ${recent.map((n) => noteRow(n, r, 'h3')).join('\n')}
   </section>` : ''}`;
   return shell({
     path: '',
-    title: `willbuilds.ai — software by ${site.name}`,
+    title: site.title,
     description: site.description,
     head: `<script>
   /* The site used to be one page; send old #projects / #about links to the new pages. */

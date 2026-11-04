@@ -1,7 +1,8 @@
 {
   "name": "Will Malfeld",
   "role": "software engineer & educator",
-  "description": "Small software tools built to solve specific problems — by Will Malfeld.",
+  "title": "willbuilds.ai — math, HVAC & planning tools by Will Malfeld",
+  "description": "Software by Will Malfeld, engineer and math educator: mountain-bike math games for Algebra I–Calculus, HVAC Studio for residential HVAC design, and Leverage Planner.",
   "intro": [
     "I build small tools that solve specific problems in my",
     "own life — then ship them so other people can use them too."
@@ -28,6 +29,11 @@
         "link": { "url": "https://wcmalfeld.github.io/MathleteMTB-Site/", "text": "about mathlete mtb" }
       },
       {
+        "key": "work",
+        "title": "Work tools",
+        "blurb": "Software I'm building for my own HVAC design work, to replace tools I've outgrown."
+      },
+      {
         "key": "personal-assistant",
         "title": "Personal assistant tools",
         "blurb": "Tools I built to plan and run my own days."
@@ -35,7 +41,7 @@
     ]
   },
   "sections": {
-    "projects": "Working software I've built: tools, games and apps, each with an honest status.",
+    "projects": "Mathlete learning tools — interactive math games from Algebra I through Calculus — plus HVAC design software and personal assistant tools I built and use.",
     "lab": "Prototypes and experiments — ideas with a working implementation that aren't finished products yet.",
     "notes": "Writing on building software, AI and teaching."
   }

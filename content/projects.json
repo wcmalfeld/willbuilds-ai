@@ -71,6 +71,33 @@
     "sourceUrl": "https://github.com/wcmalfeld/TrailBuilder_Math"
   },
   {
+    "slug": "hvac-studio",
+    "title": "HVAC Studio",
+    "category": "projects",
+    "group": "work",
+    "status": "in-development",
+    "featured": true,
+    "description": "I got tired of working in outdated Wrightsoft software for HVAC design, so I'm building my own: a browser-based workspace that takes a house from floor plan to loads, equipment, ducts and proposal using one building model.",
+    "overview": [
+      "Residential HVAC design usually means re-entering the same house in tool after tool. HVAC Studio is built around one idea: draw the house once, then size the system, the ducts and the proposal from that same model. Every dimension is stored to the sixteenth of an inch, and any missing engineering input stays visibly missing until someone enters it, instead of quietly falling back to a default.",
+      "The first piece, Building Studio, is working today: a 2D floor-plan editor where you draw walls and rooms, place windows and doors, and get live room area, volume and exposure by compass direction. Load analysis, equipment selection, duct design and estimates & proposals come next."
+    ],
+    "details": [
+      "Building Studio: walls, rectangle, polygon and click-to-fill rooms, windows and doors, multiple floors, snapping, live dimensions and typed exact lengths.",
+      "Full thermal assemblies on walls, windows and doors, with model validation as you draw.",
+      "Import a PDF or image of existing drawings and calibrate its scale from two points.",
+      "Undo/redo, copy/paste, autosave with conflict detection, version history and crash recovery.",
+      "Accounts and organizations with owner, admin, designer, sales and viewer roles, and strict separation between companies' data.",
+      "Load figures, once added, will be labeled preliminary estimates rather than ACCA Manual J reports."
+    ],
+    "tags": ["hvac", "engineering", "floor-plans", "workflow-automation"],
+    "technologies": ["Next.js", "React", "TypeScript", "Konva", "FastAPI", "PostgreSQL"],
+    "thumbnail": "images/hvac-studio.png",
+    "thumbnailAlt": "HVAC Studio floor plan with a living room, kitchen and primary bedroom, showing the bedroom's area, volume, exposed walls and window area",
+    "liveUrl": "https://hvac-studio.vercel.app/",
+    "sourceUrl": "https://github.com/wcmalfeld/HVAC-Studio"
+  },
+  {
     "slug": "leverage-planner",
     "title": "Leverage Planner",
     "category": "projects",
