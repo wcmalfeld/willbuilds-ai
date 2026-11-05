@@ -102,6 +102,34 @@
     "sourceUrl": "https://github.com/wcmalfeld/HVAC-Studio"
   },
   {
+    "slug": "the-notebook",
+    "title": "The Notebook",
+    "category": "projects",
+    "group": "personal",
+    "status": "in-development",
+    "featured": true,
+    "summary": "A private library for the lessons and ideas I want to keep.",
+    "description": "A private library for the lessons and ideas worth keeping. Every note is a page of notebook paper: capture a thought in a few seconds, scroll back through them one at a time, or lay them all out on a desk.",
+    "overview": [
+      "The lessons that change how I work and live tend to get lost in random notes apps, screenshots and bookmarks. The Notebook gives them one quiet home. Each note is a page of notebook paper, and adding one takes a few seconds with Quick Capture.",
+      "Reading them back is the point. The Scroll shows one note at a time — newest first, favorites only, or shuffled — and the Library lays every note out on a desk with search, categories and favorites. New notebooks start with twelve categories, such as Mindset, Discipline, Money and Health & Fitness."
+    ],
+    "details": [
+      "Your original writing can't be changed: edits are saved as revisions, and any edited note can show its original version.",
+      "Search combines ranked full-text search with partial-word matching across titles, writing, tags and categories.",
+      "Shuffle uses a seeded order, so paging through a shuffled feed never repeats or skips a note.",
+      "Each person's notes are walled off twice — in every query and in the database itself.",
+      "Export everything to Markdown or JSON; deleting your account removes everything.",
+      "Next: uploading and importing existing notes, and AI suggestions for titles, categories and tags that are always labeled and never rewrite your words."
+    ],
+    "tags": ["personal-development", "notes", "journaling"],
+    "technologies": ["Next.js", "React", "TypeScript", "Tailwind", "Drizzle ORM", "PostgreSQL"],
+    "thumbnail": "images/the-notebook.png",
+    "thumbnailAlt": "The Notebook Library: notes shown as pages of lined notebook paper, with search and category filters",
+    "liveUrl": "https://the-notebook-5tt6.onrender.com",
+    "sourceUrl": "https://github.com/wcmalfeld/the-notebook"
+  },
+  {
     "slug": "leverage-planner",
     "title": "Leverage Planner",
     "category": "projects",
