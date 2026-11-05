@@ -128,23 +128,46 @@ function listingPage(key) {
   const filterTags = Object.keys(counts)
     .filter((t) => counts[t] > 1 && counts[t] < items.length && !groupSets.includes(members((p) => p.tags.includes(t))))
     .sort();
-  const list = groups
-    ? groups.map((g) => {
-        const rows = items.filter((p) => p.group === g.key);
-        if (!rows.length) return '';
-        return `    <section class="proj-group" data-group aria-labelledby="group-${g.key}">
-      <div class="group-head">
-        <h2 class="group-title" id="group-${g.key}"><span class="hash" aria-hidden="true"># </span>${esc(g.title)}</h2>${g.blurb ? `
-        <p class="group-blurb">${esc(g.blurb)}${g.link ? ` <a href="${esc(g.link.url)}" target="_blank" rel="noopener">${esc(g.link.text)} →</a>` : ''}</p>` : ''}
+  const usedGroups = (groups || []).filter((g) => items.some((p) => p.group === g.key));
+  const sections = usedGroups.map((g) => {
+    const rows = items.filter((p) => p.group === g.key);
+    return `      <section class="proj-group" id="${g.key}" data-group="${g.key}" aria-labelledby="group-${g.key}">
+        <div class="group-head">
+          <h2 class="group-title" id="group-${g.key}"><span class="hash" aria-hidden="true"># </span>${esc(g.title)}</h2>${g.blurb ? `
+          <p class="group-blurb">${esc(g.blurb)}${g.link ? ` <a href="${esc(g.link.url)}" target="_blank" rel="noopener">${esc(g.link.text)} →</a>` : ''}</p>` : ''}
+        </div>
+        <ul class="proj-list">
+${rows.map((p) => projectRow(p, r, 'h3', { compact: true })).join('\n')}
+        </ul>
+      </section>`;
+  });
+  // Grouped sections get a file-tree sidebar; js/main.js shows one group at a
+  // time. Without JavaScript the tree is plain jump links over a stacked list.
+  const list = usedGroups.length
+    ? `    <div class="explorer">
+      <nav class="tree" aria-label="${esc(title)} sections">
+        <ul>
+          <li class="tree-root"><a href="#all" data-show=""><span class="tree-name">${key}/</span><span class="tree-count">${items.length}</span></a></li>
+${usedGroups.map((g) => `          <li><a href="#${g.key}" data-show="${g.key}"><span class="tree-name">${g.key}/</span><span class="tree-count">${items.filter((p) => p.group === g.key).length}</span></a></li>`).join('\n')}
+        </ul>
+      </nav>
+      <div class="explorer-main">
+        <p class="list-count" data-count aria-live="polite">${plural(items.length, noun)}</p>
+${sections.join('\n')}
+        <div class="empty" data-empty hidden>
+          <p>No ${noun[1]} match that search.</p>
+          <button class="btn btn--small" type="button" data-reset>clear search and filters</button>
+        </div>
       </div>
-      <ul class="proj-list">
-${rows.map((p) => projectRow(p, r, 'h3')).join('\n')}
-      </ul>
-    </section>`;
-      }).join('\n')
-    : `    <ul class="proj-list">
-${items.map((p) => projectRow(p, r, 'h2')).join('\n')}
-    </ul>`;
+    </div>`
+    : `    <p class="list-count" data-count aria-live="polite">${plural(items.length, noun)}</p>
+    <ul class="proj-list">
+${items.map((p) => projectRow(p, r, 'h2', { compact: true })).join('\n')}
+    </ul>
+    <div class="empty" data-empty hidden>
+      <p>No ${noun[1]} match that search.</p>
+      <button class="btn btn--small" type="button" data-reset>clear search and filters</button>
+    </div>`;
   const body = `
   ${pageHead(r, [[key]], title, site.sections[key])}
   <section class="listing" data-listing data-noun="${noun[0]}" data-nouns="${noun[1]}" aria-label="${esc(title)}">
@@ -159,12 +182,7 @@ ${items.map((p) => projectRow(p, r, 'h2')).join('\n')}
 ${filterTags.map((t) => `        <button class="chip" type="button" data-tag="${esc(t)}" aria-pressed="false">${esc(t)}</button>`).join('\n')}
       </div>` : ''}
     </div>
-    <p class="list-count" data-count aria-live="polite">${plural(items.length, noun)}</p>
 ${list}
-    <div class="empty" data-empty hidden>
-      <p>No ${noun[1]} match that search.</p>
-      <button class="btn btn--small" type="button" data-reset>clear search and filters</button>
-    </div>
   </section>`;
   return shell({ path, title: `${title} — willbuilds.ai`, description: site.sections[key], active: key, body });
 }
@@ -173,13 +191,15 @@ function projectPage(p) {
   const path = `${p.category}/${p.slug}/`;
   const r = rel(path);
   const section = SECTIONS[p.category];
+  const group = site.groups?.[p.category]?.find((g) => g.key === p.group);
+  const sectionHref = `${r}${p.category}/${group ? `#${group.key}` : ''}`;
   const links = [
     p.liveUrl && `<a class="btn btn--primary" href="${esc(p.liveUrl)}" target="_blank" rel="noopener">open live project →</a>`,
     p.sourceUrl && `<a class="btn" href="${esc(p.sourceUrl)}" target="_blank" rel="noopener">source code →</a>`,
   ].filter(Boolean);
   const meta = [
     ['status', statusBadge(p.status, '')],
-    ['section', `<a href="${r}${p.category}/">${p.category}</a>`],
+    ['section', `<a href="${sectionHref}">${p.category}${group ? ` / ${group.key}` : ''}</a>`],
     p.technologies?.length && ['built with', esc(p.technologies.join(', '))],
   ].filter(Boolean);
   const body = `
@@ -195,7 +215,7 @@ ${readmeSection('problem', p.problem && `<p>${esc(p.problem)}</p>`)}
 ${readmeSection('solution', p.solution && `<p>${esc(p.solution)}</p>`)}
 ${readmeSection('details', p.details?.length && `<ul>${p.details.map((d) => `<li>${esc(d)}</li>`).join('')}</ul>`)}
 ${readmeSection('tags', tagList(p.tags))}
-    <p class="back-link"><a href="${r}${p.category}/">← back to ${section.title.toLowerCase()}</a></p>
+    <p class="back-link"><a href="${sectionHref}">← back to ${group ? esc(group.title.toLowerCase()) : section.title.toLowerCase()}</a></p>
   </article>`;
   return shell({
     path,
@@ -368,9 +388,18 @@ function sectHead(id, cmd, title) {
     </div>`;
 }
 
-function projectRow(p, r, h) {
-  const search = [p.title, p.description, ...p.tags, ...(p.technologies || []), ...(p.overview || []), ...(p.details || [])]
+function projectRow(p, r, h, { compact = false } = {}) {
+  const search = [p.title, p.summary, p.description, ...p.tags, ...(p.technologies || []), ...(p.overview || []), ...(p.details || [])]
     .join(' ').toLowerCase();
+  if (compact) {
+    return `          <li class="proj proj--compact" data-search="${esc(search)}" data-tags="${esc(p.tags.join(' '))}">
+            <div class="proj-line">
+              <${h} class="proj-name"><a class="proj-title" href="${r}${p.category}/${p.slug}/"><span class="glyph" aria-hidden="true">&gt;</span>${esc(p.title)}</a></${h}>
+              ${statusBadge(p.status, '')}
+            </div>
+            <p class="proj-summary">${esc(p.summary || p.description)}</p>
+          </li>`;
+  }
   return `      <li class="proj${p.thumbnail ? ' proj--thumb' : ''}" data-search="${esc(search)}" data-tags="${esc(p.tags.join(' '))}">
         <div class="proj-body">
           <${h} class="proj-name"><a class="proj-title" href="${r}${p.category}/${p.slug}/"><span class="glyph" aria-hidden="true">&gt;</span>${esc(p.title)}</a></${h}>

@@ -47,74 +47,81 @@
         <button class="btn btn--small" type="button" data-clear hidden>clear</button>
       </div>
     </div>
-    <p class="list-count" data-count aria-live="polite">5 projects</p>
-    <section class="proj-group" data-group aria-labelledby="group-mathlete">
-      <div class="group-head">
-        <h2 class="group-title" id="group-mathlete"><span class="hash" aria-hidden="true"># </span>Mathlete learning tools</h2>
-        <p class="group-blurb">Interactive math games I built for Mathlete MTB, my math and physics tutoring for young athletes. Each one puts students in a mountain-bike scenario and runs at six levels, from Algebra I through Calculus. <a href="https://wcmalfeld.github.io/MathleteMTB-Site/" target="_blank" rel="noopener">about mathlete mtb →</a></p>
+    <div class="explorer">
+      <nav class="tree" aria-label="Projects sections">
+        <ul>
+          <li class="tree-root"><a href="#all" data-show=""><span class="tree-name">projects/</span><span class="tree-count">5</span></a></li>
+          <li><a href="#mathlete" data-show="mathlete"><span class="tree-name">mathlete/</span><span class="tree-count">3</span></a></li>
+          <li><a href="#work" data-show="work"><span class="tree-name">work/</span><span class="tree-count">1</span></a></li>
+          <li><a href="#personal" data-show="personal"><span class="tree-name">personal/</span><span class="tree-count">1</span></a></li>
+        </ul>
+      </nav>
+      <div class="explorer-main">
+        <p class="list-count" data-count aria-live="polite">5 projects</p>
+      <section class="proj-group" id="mathlete" data-group="mathlete" aria-labelledby="group-mathlete">
+        <div class="group-head">
+          <h2 class="group-title" id="group-mathlete"><span class="hash" aria-hidden="true"># </span>Mathlete learning tools</h2>
+          <p class="group-blurb">Interactive math games I built for Mathlete MTB, my math and physics tutoring for young athletes. Each one puts students in a mountain-bike scenario and runs at six levels, from Algebra I through Calculus. <a href="https://wcmalfeld.github.io/MathleteMTB-Site/" target="_blank" rel="noopener">about mathlete mtb →</a></p>
+        </div>
+        <ul class="proj-list">
+          <li class="proj proj--compact" data-search="gear ratio lab pick the gears, work the ratios, race the rival. a race-mechanic game: students choose a chainring, wheel and cogs for each section of a mountain-bike course, work out the ratios, speeds and times, then race their setup against a rival's. education tutoring game mountain-biking students play the mechanic for a mountain-bike racer. each course section lists its grade, the rider's cadence and a push limit — the biggest gear ratio the rider can turn there. go over it and the rider walks; every cog change costs time. students work the numbers for every section, race their setup against a rival's on the course profile, then change one part, predict the new time and test the prediction. the same game runs at six levels: algebra i (ratios, rates, inequalities), geometry (circumference, gear inches), algebra ii (inverse variation, constraints), precalculus (angular velocity), statistics (percent steps, spread) and calculus (related rates). spec — pick a race course. plan — choose a chainring, a wheel and one rear cog per section. lab — work out the ratio, distance per crank turn, speed and time for every section, plus one problem for the class. race — the setup races the rival's on the course profile. tune — change one part, predict the new time, test it, and answer the mechanic's question." data-tags="education tutoring game mountain-biking">
+            <div class="proj-line">
+              <h3 class="proj-name"><a class="proj-title" href="../projects/gear-ratio-lab/"><span class="glyph" aria-hidden="true">&gt;</span>Gear Ratio Lab</a></h3>
+              <span class="status status--live"><span class="status-mark" aria-hidden="true"></span>live</span>
+            </div>
+            <p class="proj-summary">Pick the gears, work the ratios, race the rival.</p>
+          </li>
+          <li class="proj proj--compact" data-search="strava showdown call the podium, crunch the riders' stats, plot the race. a race-analyst game: students call the podium from a field of riders' ride data, crunch each rider's stats, plot them on a distance–time graph, and defend their final call with numbers. education tutoring game mountain-biking students sit at the race analyst's desk for a mountain-bike team. they're dealt a field of riders and a brief saying what the team is selecting for, lock in a podium prediction before doing any math, then compute each rider's stats and plot every rider on a distance–time graph, where slope is speed. the round ends with the coach's question, answered with numbers and the graph, and a final podium. the same game runs at six levels: algebra i (rates, d = rt, systems), geometry (coordinate distance), algebra ii (means of rates), precalculus (average rate of change), statistics (spread and z-scores) and calculus (integrals and the mean value theorem). deal — a field of riders and a race brief. call it — predict the podium before any math; it locks in. crunch — compute each rider's stats on the analyst sheet, plus one problem for the class. plot — plot each rider on a distance–time graph. showdown — answer the coach's question with numbers and the graph, then give the final podium." data-tags="education tutoring game mountain-biking">
+            <div class="proj-line">
+              <h3 class="proj-name"><a class="proj-title" href="../projects/strava-showdown/"><span class="glyph" aria-hidden="true">&gt;</span>Strava Showdown</a></h3>
+              <span class="status status--live"><span class="status-mark" aria-hidden="true"></span>live</span>
+            </div>
+            <p class="proj-summary">Call the podium, crunch the riders' stats, plot the race.</p>
+          </li>
+          <li class="proj proj--compact" data-search="trail builder build a trail on budget by solving the math for every segment. a trail-crew game: students take a client's work order, solve the math for every trail segment they build, and have to land exactly on the finish elevation within budget. education tutoring game mountain-biking students run a trail crew building real-world-inspired trails in new zealand, chile, scotland, canada and tasmania. a client sets the budget, the trailhead elevation and where the trail must finish. every segment bought from the shop needs its math solved before it goes in, then a test rider rides the finished trail — and flats and washouts cost money. the same game runs at six levels: algebra i (linear models and inequalities), geometry (right triangles and the pythagorean theorem), algebra ii (quadratics, exponentials, logs), precalculus (trigonometry and angles), statistics (probability and expected value) and calculus (derivatives and integrals). survey — take a work order with a budget, a trailhead elevation and a finish. build — buy segments and solve the math for each one; the trail must end exactly at the finish elevation. ride — a test rider rolls the die on every segment rated 3 or higher. review — score up to 100 points plus a bonus, name the trail, explain why it works, and add it to the trail network." data-tags="education tutoring game mountain-biking">
+            <div class="proj-line">
+              <h3 class="proj-name"><a class="proj-title" href="../projects/trail-builder/"><span class="glyph" aria-hidden="true">&gt;</span>Trail Builder</a></h3>
+              <span class="status status--live"><span class="status-mark" aria-hidden="true"></span>live</span>
+            </div>
+            <p class="proj-summary">Build a trail on budget by solving the math for every segment.</p>
+          </li>
+        </ul>
+      </section>
+      <section class="proj-group" id="work" data-group="work" aria-labelledby="group-work">
+        <div class="group-head">
+          <h2 class="group-title" id="group-work"><span class="hash" aria-hidden="true"># </span>Work tools</h2>
+          <p class="group-blurb">Software I'm building for my own HVAC design work, to replace tools I've outgrown.</p>
+        </div>
+        <ul class="proj-list">
+          <li class="proj proj--compact" data-search="hvac studio residential hvac design, from floor plan to proposal, in one model. i got tired of working in outdated wrightsoft software for hvac design, so i'm building my own: a browser-based workspace that takes a house from floor plan to loads, equipment, ducts and proposal using one building model. hvac engineering floor-plans workflow-automation next.js react typescript konva fastapi postgresql residential hvac design usually means re-entering the same house in tool after tool. hvac studio is built around one idea: draw the house once, then size the system, the ducts and the proposal from that same model. every dimension is stored to the sixteenth of an inch, and any missing engineering input stays visibly missing until someone enters it, instead of quietly falling back to a default. the first piece, building studio, is working today: a 2d floor-plan editor where you draw walls and rooms, place windows and doors, and get live room area, volume and exposure by compass direction. load analysis, equipment selection, duct design and estimates &amp; proposals come next. building studio: walls, rectangle, polygon and click-to-fill rooms, windows and doors, multiple floors, snapping, live dimensions and typed exact lengths. full thermal assemblies on walls, windows and doors, with model validation as you draw. import a pdf or image of existing drawings and calibrate its scale from two points. undo/redo, copy/paste, autosave with conflict detection, version history and crash recovery. accounts and organizations with owner, admin, designer, sales and viewer roles, and strict separation between companies' data. load figures, once added, will be labeled preliminary estimates rather than acca manual j reports." data-tags="hvac engineering floor-plans workflow-automation">
+            <div class="proj-line">
+              <h3 class="proj-name"><a class="proj-title" href="../projects/hvac-studio/"><span class="glyph" aria-hidden="true">&gt;</span>HVAC Studio</a></h3>
+              <span class="status status--in-development"><span class="status-mark" aria-hidden="true"></span>in development</span>
+            </div>
+            <p class="proj-summary">Residential HVAC design, from floor plan to proposal, in one model.</p>
+          </li>
+        </ul>
+      </section>
+      <section class="proj-group" id="personal" data-group="personal" aria-labelledby="group-personal">
+        <div class="group-head">
+          <h2 class="group-title" id="group-personal"><span class="hash" aria-hidden="true"># </span>Personal assistant tools</h2>
+          <p class="group-blurb">Tools I built to plan and run my own days.</p>
+        </div>
+        <ul class="proj-list">
+          <li class="proj proj--compact" data-search="leverage planner ranks my tasks by leverage and fits the best into my real day. a local-first planner that ranks what i could be doing by leverage against my own goals, then fits the best of it into my real day. productivity planning scheduling personal-development react typescript vite vitest a local-first personal strategy engine. it ranks everything i could be doing by leverage against my own goals, fits the best of it into my real day with sleep, meals, training and people protected, and compares that plan with what i'd otherwise do. daily and weekly reviews feed back in, recalibrating time estimates and flagging when one goal is eating more than its share of the week. no accounts or api keys, and all data stays in the browser. an eight-factor weighted leverage score, with a plain-language explanation for every ranking. a scheduler that works around routine, commitments and travel, matches tasks to energy and focus windows, and stops before eating into requested open time. important tasks that don't fit come back with concrete fixes: postpone something lower-ranked, shorten, split or move to tomorrow. after three completed tasks per goal, actual-vs-estimate ratios recalibrate future durations. 55 unit tests cover the scoring, scheduling, comparison and review engine." data-tags="productivity planning scheduling personal-development">
+            <div class="proj-line">
+              <h3 class="proj-name"><a class="proj-title" href="../projects/leverage-planner/"><span class="glyph" aria-hidden="true">&gt;</span>Leverage Planner</a></h3>
+              <span class="status status--in-development"><span class="status-mark" aria-hidden="true"></span>in development</span>
+            </div>
+            <p class="proj-summary">Ranks my tasks by leverage and fits the best into my real day.</p>
+          </li>
+        </ul>
+      </section>
+        <div class="empty" data-empty hidden>
+          <p>No projects match that search.</p>
+          <button class="btn btn--small" type="button" data-reset>clear search and filters</button>
+        </div>
       </div>
-      <ul class="proj-list">
-      <li class="proj proj--thumb" data-search="gear ratio lab a race-mechanic game: students choose a chainring, wheel and cogs for each section of a mountain-bike course, work out the ratios, speeds and times, then race their setup against a rival's. education tutoring game mountain-biking students play the mechanic for a mountain-bike racer. each course section lists its grade, the rider's cadence and a push limit — the biggest gear ratio the rider can turn there. go over it and the rider walks; every cog change costs time. students work the numbers for every section, race their setup against a rival's on the course profile, then change one part, predict the new time and test the prediction. the same game runs at six levels: algebra i (ratios, rates, inequalities), geometry (circumference, gear inches), algebra ii (inverse variation, constraints), precalculus (angular velocity), statistics (percent steps, spread) and calculus (related rates). spec — pick a race course. plan — choose a chainring, a wheel and one rear cog per section. lab — work out the ratio, distance per crank turn, speed and time for every section, plus one problem for the class. race — the setup races the rival's on the course profile. tune — change one part, predict the new time, test it, and answer the mechanic's question." data-tags="education tutoring game mountain-biking">
-        <div class="proj-body">
-          <h3 class="proj-name"><a class="proj-title" href="../projects/gear-ratio-lab/"><span class="glyph" aria-hidden="true">&gt;</span>Gear Ratio Lab</a></h3>
-          <p class="proj-desc">A race-mechanic game: students choose a chainring, wheel and cogs for each section of a mountain-bike course, work out the ratios, speeds and times, then race their setup against a rival's.</p>
-          <div class="proj-meta"><span class="status status--live"><span class="status-mark" aria-hidden="true"></span>status: live</span><ul class="tags" aria-label="Tags"><li class="tag">education</li><li class="tag">tutoring</li><li class="tag">game</li><li class="tag">mountain-biking</li></ul></div>
-        </div>
-        <img class="proj-thumb" src="../images/gear-ratio-lab.png" alt="" loading="lazy">
-      </li>
-      <li class="proj proj--thumb" data-search="strava showdown a race-analyst game: students call the podium from a field of riders' ride data, crunch each rider's stats, plot them on a distance–time graph, and defend their final call with numbers. education tutoring game mountain-biking students sit at the race analyst's desk for a mountain-bike team. they're dealt a field of riders and a brief saying what the team is selecting for, lock in a podium prediction before doing any math, then compute each rider's stats and plot every rider on a distance–time graph, where slope is speed. the round ends with the coach's question, answered with numbers and the graph, and a final podium. the same game runs at six levels: algebra i (rates, d = rt, systems), geometry (coordinate distance), algebra ii (means of rates), precalculus (average rate of change), statistics (spread and z-scores) and calculus (integrals and the mean value theorem). deal — a field of riders and a race brief. call it — predict the podium before any math; it locks in. crunch — compute each rider's stats on the analyst sheet, plus one problem for the class. plot — plot each rider on a distance–time graph. showdown — answer the coach's question with numbers and the graph, then give the final podium." data-tags="education tutoring game mountain-biking">
-        <div class="proj-body">
-          <h3 class="proj-name"><a class="proj-title" href="../projects/strava-showdown/"><span class="glyph" aria-hidden="true">&gt;</span>Strava Showdown</a></h3>
-          <p class="proj-desc">A race-analyst game: students call the podium from a field of riders' ride data, crunch each rider's stats, plot them on a distance–time graph, and defend their final call with numbers.</p>
-          <div class="proj-meta"><span class="status status--live"><span class="status-mark" aria-hidden="true"></span>status: live</span><ul class="tags" aria-label="Tags"><li class="tag">education</li><li class="tag">tutoring</li><li class="tag">game</li><li class="tag">mountain-biking</li></ul></div>
-        </div>
-        <img class="proj-thumb" src="../images/strava-showdown.png" alt="" loading="lazy">
-      </li>
-      <li class="proj proj--thumb" data-search="trail builder a trail-crew game: students take a client's work order, solve the math for every trail segment they build, and have to land exactly on the finish elevation within budget. education tutoring game mountain-biking students run a trail crew building real-world-inspired trails in new zealand, chile, scotland, canada and tasmania. a client sets the budget, the trailhead elevation and where the trail must finish. every segment bought from the shop needs its math solved before it goes in, then a test rider rides the finished trail — and flats and washouts cost money. the same game runs at six levels: algebra i (linear models and inequalities), geometry (right triangles and the pythagorean theorem), algebra ii (quadratics, exponentials, logs), precalculus (trigonometry and angles), statistics (probability and expected value) and calculus (derivatives and integrals). survey — take a work order with a budget, a trailhead elevation and a finish. build — buy segments and solve the math for each one; the trail must end exactly at the finish elevation. ride — a test rider rolls the die on every segment rated 3 or higher. review — score up to 100 points plus a bonus, name the trail, explain why it works, and add it to the trail network." data-tags="education tutoring game mountain-biking">
-        <div class="proj-body">
-          <h3 class="proj-name"><a class="proj-title" href="../projects/trail-builder/"><span class="glyph" aria-hidden="true">&gt;</span>Trail Builder</a></h3>
-          <p class="proj-desc">A trail-crew game: students take a client's work order, solve the math for every trail segment they build, and have to land exactly on the finish elevation within budget.</p>
-          <div class="proj-meta"><span class="status status--live"><span class="status-mark" aria-hidden="true"></span>status: live</span><ul class="tags" aria-label="Tags"><li class="tag">education</li><li class="tag">tutoring</li><li class="tag">game</li><li class="tag">mountain-biking</li></ul></div>
-        </div>
-        <img class="proj-thumb" src="../images/trail-builder.png" alt="" loading="lazy">
-      </li>
-      </ul>
-    </section>
-    <section class="proj-group" data-group aria-labelledby="group-work">
-      <div class="group-head">
-        <h2 class="group-title" id="group-work"><span class="hash" aria-hidden="true"># </span>Work tools</h2>
-        <p class="group-blurb">Software I'm building for my own HVAC design work, to replace tools I've outgrown.</p>
-      </div>
-      <ul class="proj-list">
-      <li class="proj proj--thumb" data-search="hvac studio i got tired of working in outdated wrightsoft software for hvac design, so i'm building my own: a browser-based workspace that takes a house from floor plan to loads, equipment, ducts and proposal using one building model. hvac engineering floor-plans workflow-automation next.js react typescript konva fastapi postgresql residential hvac design usually means re-entering the same house in tool after tool. hvac studio is built around one idea: draw the house once, then size the system, the ducts and the proposal from that same model. every dimension is stored to the sixteenth of an inch, and any missing engineering input stays visibly missing until someone enters it, instead of quietly falling back to a default. the first piece, building studio, is working today: a 2d floor-plan editor where you draw walls and rooms, place windows and doors, and get live room area, volume and exposure by compass direction. load analysis, equipment selection, duct design and estimates &amp; proposals come next. building studio: walls, rectangle, polygon and click-to-fill rooms, windows and doors, multiple floors, snapping, live dimensions and typed exact lengths. full thermal assemblies on walls, windows and doors, with model validation as you draw. import a pdf or image of existing drawings and calibrate its scale from two points. undo/redo, copy/paste, autosave with conflict detection, version history and crash recovery. accounts and organizations with owner, admin, designer, sales and viewer roles, and strict separation between companies' data. load figures, once added, will be labeled preliminary estimates rather than acca manual j reports." data-tags="hvac engineering floor-plans workflow-automation">
-        <div class="proj-body">
-          <h3 class="proj-name"><a class="proj-title" href="../projects/hvac-studio/"><span class="glyph" aria-hidden="true">&gt;</span>HVAC Studio</a></h3>
-          <p class="proj-desc">I got tired of working in outdated Wrightsoft software for HVAC design, so I'm building my own: a browser-based workspace that takes a house from floor plan to loads, equipment, ducts and proposal using one building model.</p>
-          <div class="proj-meta"><span class="status status--in-development"><span class="status-mark" aria-hidden="true"></span>status: in development</span><ul class="tags" aria-label="Tags"><li class="tag">hvac</li><li class="tag">engineering</li><li class="tag">floor-plans</li><li class="tag">workflow-automation</li></ul></div>
-        </div>
-        <img class="proj-thumb" src="../images/hvac-studio.png" alt="" loading="lazy">
-      </li>
-      </ul>
-    </section>
-    <section class="proj-group" data-group aria-labelledby="group-personal-assistant">
-      <div class="group-head">
-        <h2 class="group-title" id="group-personal-assistant"><span class="hash" aria-hidden="true"># </span>Personal assistant tools</h2>
-        <p class="group-blurb">Tools I built to plan and run my own days.</p>
-      </div>
-      <ul class="proj-list">
-      <li class="proj proj--thumb" data-search="leverage planner a local-first planner that ranks what i could be doing by leverage against my own goals, then fits the best of it into my real day. productivity planning scheduling personal-development react typescript vite vitest a local-first personal strategy engine. it ranks everything i could be doing by leverage against my own goals, fits the best of it into my real day with sleep, meals, training and people protected, and compares that plan with what i'd otherwise do. daily and weekly reviews feed back in, recalibrating time estimates and flagging when one goal is eating more than its share of the week. no accounts or api keys, and all data stays in the browser. an eight-factor weighted leverage score, with a plain-language explanation for every ranking. a scheduler that works around routine, commitments and travel, matches tasks to energy and focus windows, and stops before eating into requested open time. important tasks that don't fit come back with concrete fixes: postpone something lower-ranked, shorten, split or move to tomorrow. after three completed tasks per goal, actual-vs-estimate ratios recalibrate future durations. 55 unit tests cover the scoring, scheduling, comparison and review engine." data-tags="productivity planning scheduling personal-development">
-        <div class="proj-body">
-          <h3 class="proj-name"><a class="proj-title" href="../projects/leverage-planner/"><span class="glyph" aria-hidden="true">&gt;</span>Leverage Planner</a></h3>
-          <p class="proj-desc">A local-first planner that ranks what I could be doing by leverage against my own goals, then fits the best of it into my real day.</p>
-          <div class="proj-meta"><span class="status status--in-development"><span class="status-mark" aria-hidden="true"></span>status: in development</span><ul class="tags" aria-label="Tags"><li class="tag">productivity</li><li class="tag">planning</li><li class="tag">scheduling</li><li class="tag">personal-development</li></ul></div>
-        </div>
-        <img class="proj-thumb" src="../images/leverage-planner.png" alt="" loading="lazy">
-      </li>
-      </ul>
-    </section>
-    <div class="empty" data-empty hidden>
-      <p>No projects match that search.</p>
-      <button class="btn btn--small" type="button" data-reset>clear search and filters</button>
     </div>
   </section>
 </main>

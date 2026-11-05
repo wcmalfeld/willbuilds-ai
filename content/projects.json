@@ -5,6 +5,7 @@
     "category": "projects",
     "group": "mathlete",
     "status": "live",
+    "summary": "Pick the gears, work the ratios, race the rival.",
     "description": "A race-mechanic game: students choose a chainring, wheel and cogs for each section of a mountain-bike course, work out the ratios, speeds and times, then race their setup against a rival's.",
     "overview": [
       "Students play the mechanic for a mountain-bike racer. Each course section lists its grade, the rider's cadence and a push limit — the biggest gear ratio the rider can turn there. Go over it and the rider walks; every cog change costs time. Students work the numbers for every section, race their setup against a rival's on the course profile, then change one part, predict the new time and test the prediction.",
@@ -29,6 +30,7 @@
     "category": "projects",
     "group": "mathlete",
     "status": "live",
+    "summary": "Call the podium, crunch the riders' stats, plot the race.",
     "description": "A race-analyst game: students call the podium from a field of riders' ride data, crunch each rider's stats, plot them on a distance–time graph, and defend their final call with numbers.",
     "overview": [
       "Students sit at the race analyst's desk for a mountain-bike team. They're dealt a field of riders and a brief saying what the team is selecting for, lock in a podium prediction before doing any math, then compute each rider's stats and plot every rider on a distance–time graph, where slope is speed. The round ends with the coach's question, answered with numbers and the graph, and a final podium.",
@@ -53,6 +55,7 @@
     "category": "projects",
     "group": "mathlete",
     "status": "live",
+    "summary": "Build a trail on budget by solving the math for every segment.",
     "description": "A trail-crew game: students take a client's work order, solve the math for every trail segment they build, and have to land exactly on the finish elevation within budget.",
     "overview": [
       "Students run a trail crew building real-world-inspired trails in New Zealand, Chile, Scotland, Canada and Tasmania. A client sets the budget, the trailhead elevation and where the trail must finish. Every segment bought from the shop needs its math solved before it goes in, then a test rider rides the finished trail — and flats and washouts cost money.",
@@ -77,6 +80,7 @@
     "group": "work",
     "status": "in-development",
     "featured": true,
+    "summary": "Residential HVAC design, from floor plan to proposal, in one model.",
     "description": "I got tired of working in outdated Wrightsoft software for HVAC design, so I'm building my own: a browser-based workspace that takes a house from floor plan to loads, equipment, ducts and proposal using one building model.",
     "overview": [
       "Residential HVAC design usually means re-entering the same house in tool after tool. HVAC Studio is built around one idea: draw the house once, then size the system, the ducts and the proposal from that same model. Every dimension is stored to the sixteenth of an inch, and any missing engineering input stays visibly missing until someone enters it, instead of quietly falling back to a default.",
@@ -101,9 +105,10 @@
     "slug": "leverage-planner",
     "title": "Leverage Planner",
     "category": "projects",
-    "group": "personal-assistant",
+    "group": "personal",
     "status": "in-development",
     "featured": true,
+    "summary": "Ranks my tasks by leverage and fits the best into my real day.",
     "description": "A local-first planner that ranks what I could be doing by leverage against my own goals, then fits the best of it into my real day.",
     "overview": [
       "A local-first personal strategy engine. It ranks everything I could be doing by leverage against my own goals, fits the best of it into my real day with sleep, meals, training and people protected, and compares that plan with what I'd otherwise do. Daily and weekly reviews feed back in, recalibrating time estimates and flagging when one goal is eating more than its share of the week. No accounts or API keys, and all data stays in the browser."
