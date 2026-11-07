@@ -46,24 +46,35 @@
         <input class="search-input" id="q-projects" type="search" placeholder="search projects…" autocomplete="off" spellcheck="false" data-query>
         <button class="btn btn--small" type="button" data-clear hidden>clear</button>
       </div>
+      <div class="filters" role="group" aria-label="Filter by tag">
+        <button class="chip" type="button" data-tag="" aria-pressed="true">all</button>
+        <button class="chip" type="button" data-tag="game" aria-pressed="false">game</button>
+      </div>
     </div>
     <div class="explorer">
       <nav class="tree" aria-label="Projects sections">
         <ul>
-          <li class="tree-root"><a href="#all" data-show=""><span class="tree-name">projects/</span><span class="tree-count">6</span></a></li>
-          <li><a href="#mathlete" data-show="mathlete"><span class="tree-name">mathlete/</span><span class="tree-count">3</span></a></li>
+          <li class="tree-root"><a href="#all" data-show=""><span class="tree-name">projects/</span><span class="tree-count">7</span></a></li>
+          <li><a href="#mathlete" data-show="mathlete"><span class="tree-name">mathlete/</span><span class="tree-count">4</span></a></li>
           <li><a href="#work" data-show="work"><span class="tree-name">work/</span><span class="tree-count">1</span></a></li>
           <li><a href="#personal" data-show="personal"><span class="tree-name">personal/</span><span class="tree-count">2</span></a></li>
         </ul>
       </nav>
       <div class="explorer-main">
-        <p class="list-count" data-count aria-live="polite">6 projects</p>
+        <p class="list-count" data-count aria-live="polite">7 projects</p>
       <section class="proj-group" id="mathlete" data-group="mathlete" aria-labelledby="group-mathlete">
         <div class="group-head">
           <h2 class="group-title" id="group-mathlete"><span class="hash" aria-hidden="true"># </span>Mathlete learning tools</h2>
           <p class="group-blurb">Interactive math games I built for Mathlete MTB, my math and physics tutoring for young athletes. Each one puts students in a mountain-bike scenario and runs at six levels, from Algebra I through Calculus. <a href="https://wcmalfeld.github.io/MathleteMTB-Site/" target="_blank" rel="noopener">about mathlete mtb →</a></p>
         </div>
         <ul class="proj-list">
+          <li class="proj proj--compact" data-search="mathlete mtb my tutoring business and its lab of mountain-bike math tools. the home of my math and physics tutoring for young athletes: the mathlete lab of interactive mountain-bike math tools, plus one-on-one sessions in math, physics and sat prep. education tutoring mountain-biking mathlete mtb is my tutoring business, built around a simple idea: young athletes learn math faster when the problems are about something they care about. the site brings together the mathlete lab — interactive tools that put students on the trail, at the race desk or in the bike shop — and private one-on-one tutoring. the lab is organized into four themed labs: the engineering lab (physics, motion and mechanical systems), trail crew (trail design, mapping and terrain), race team (performance analysis and statistics) and bike workshop (gearing and component setup). students can filter every tool by activity, math subject, level and time. open tools: trail builder, mtb physics playground, gear ratio lab, strava showdown and jump lab. members-only tools for my students, including summit expedition. focus training: math tools built on research into short attention spans, in development. private tutoring on zoom with a shared whiteboard, from middle school math through calculus, high school physics and sat prep, with online booking. a companion mathlete ski section." data-tags="education tutoring mountain-biking">
+            <div class="proj-line">
+              <h3 class="proj-name"><a class="proj-title" href="../projects/mathlete-mtb/"><span class="glyph" aria-hidden="true">&gt;</span>Mathlete MTB</a></h3>
+              <span class="status status--live"><span class="status-mark" aria-hidden="true"></span>live</span>
+            </div>
+            <p class="proj-summary">My tutoring business and its lab of mountain-bike math tools.</p>
+          </li>
           <li class="proj proj--compact" data-search="gear ratio lab pick the gears, work the ratios, race the rival. a race-mechanic game: students choose a chainring, wheel and cogs for each section of a mountain-bike course, work out the ratios, speeds and times, then race their setup against a rival's. education tutoring game mountain-biking students play the mechanic for a mountain-bike racer. each course section lists its grade, the rider's cadence and a push limit — the biggest gear ratio the rider can turn there. go over it and the rider walks; every cog change costs time. students work the numbers for every section, race their setup against a rival's on the course profile, then change one part, predict the new time and test the prediction. the same game runs at six levels: algebra i (ratios, rates, inequalities), geometry (circumference, gear inches), algebra ii (inverse variation, constraints), precalculus (angular velocity), statistics (percent steps, spread) and calculus (related rates). spec — pick a race course. plan — choose a chainring, a wheel and one rear cog per section. lab — work out the ratio, distance per crank turn, speed and time for every section, plus one problem for the class. race — the setup races the rival's on the course profile. tune — change one part, predict the new time, test it, and answer the mechanic's question." data-tags="education tutoring game mountain-biking">
             <div class="proj-line">
               <h3 class="proj-name"><a class="proj-title" href="../projects/gear-ratio-lab/"><span class="glyph" aria-hidden="true">&gt;</span>Gear Ratio Lab</a></h3>

@@ -1,5 +1,31 @@
 [
   {
+    "slug": "mathlete-mtb",
+    "title": "Mathlete MTB",
+    "category": "projects",
+    "group": "mathlete",
+    "status": "live",
+    "featured": true,
+    "summary": "My tutoring business and its lab of mountain-bike math tools.",
+    "description": "The home of my math and physics tutoring for young athletes: the Mathlete Lab of interactive mountain-bike math tools, plus one-on-one sessions in math, physics and SAT prep.",
+    "overview": [
+      "Mathlete MTB is my tutoring business, built around a simple idea: young athletes learn math faster when the problems are about something they care about. The site brings together the Mathlete Lab — interactive tools that put students on the trail, at the race desk or in the bike shop — and private one-on-one tutoring.",
+      "The Lab is organized into four themed labs: the Engineering Lab (physics, motion and mechanical systems), Trail Crew (trail design, mapping and terrain), Race Team (performance analysis and statistics) and Bike Workshop (gearing and component setup). Students can filter every tool by activity, math subject, level and time."
+    ],
+    "details": [
+      "Open tools: Trail Builder, MTB Physics Playground, Gear Ratio Lab, Strava Showdown and Jump Lab.",
+      "Members-only tools for my students, including Summit Expedition.",
+      "Focus Training: math tools built on research into short attention spans, in development.",
+      "Private tutoring on Zoom with a shared whiteboard, from middle school math through Calculus, high school physics and SAT prep, with online booking.",
+      "A companion Mathlete Ski section."
+    ],
+    "tags": ["education", "tutoring", "mountain-biking"],
+    "thumbnail": "images/mathlete-mtb.png",
+    "thumbnailAlt": "Mathlete MTB homepage: the Mathlete Lab with its Engineering Lab, Trail Crew, Race Team and Bike Workshop",
+    "liveUrl": "https://wcmalfeld.github.io/MathleteMTB-Site/",
+    "sourceUrl": "https://github.com/wcmalfeld/MathleteMTB-Site"
+  },
+  {
     "slug": "gear-ratio-lab",
     "title": "Gear Ratio Lab",
     "category": "projects",
