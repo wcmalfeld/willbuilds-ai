@@ -61,7 +61,8 @@ console.log(`built ${pages.length} pages + 404.html, sitemap.xml (${projects.len
 function homePage() {
   const r = '';
   const featured = projects.filter((p) => p.featured);
-  const picks = (featured.length ? featured : inSection('projects')).slice(0, 4);
+  // Six fills the card grid evenly at both three and two columns.
+  const picks = (featured.length ? featured : inSection('projects')).slice(0, 6);
   const recent = notes.slice(0, 3);
   const body = `
   <section class="term" aria-labelledby="intro-title">
@@ -85,8 +86,8 @@ ${site.intro.map((l) => `      <p class="term-line term-out">${esc(l)}</p>`).joi
 ${picks.length ? `
   <section class="sect" aria-labelledby="featured-title">
     ${sectHead('featured-title', '$ ls ./projects --featured', 'Featured projects')}
-    <ul class="proj-list">
-${picks.map((p) => projectRow(p, r, 'h3')).join('\n')}
+    <ul class="card-grid">
+${picks.map((p) => projectCard(p, r)).join('\n')}
     </ul>
     <p class="sect-more">
       <a href="projects/">all projects (${inSection('projects').length}) →</a>${shown('lab') ? `
@@ -407,6 +408,19 @@ function projectRow(p, r, h, { compact = false } = {}) {
           <div class="proj-meta">${statusBadge(p.status)}${tagList(p.tags)}</div>
         </div>${p.thumbnail ? `
         <img class="proj-thumb" src="${r}${esc(p.thumbnail)}" alt="" loading="lazy">` : ''}
+      </li>`;
+}
+
+function projectCard(p, r) {
+  const folder = p.group || p.category;
+  return `      <li class="card">${p.thumbnail ? `
+        <img class="card-thumb" src="${r}${esc(p.thumbnail)}" alt="" loading="lazy">` : ''}
+        <div class="card-body">
+          <p class="card-path" aria-hidden="true">~/${esc(p.category)}/${p.group ? `${esc(folder)}/` : ''}</p>
+          <h3 class="card-title"><a class="proj-title" href="${r}${p.category}/${p.slug}/">${esc(p.title)}</a></h3>
+          <p class="card-desc">${esc(p.summary || p.description)}</p>
+          <div class="card-meta">${statusBadge(p.status)}</div>
+        </div>
       </li>`;
 }
 

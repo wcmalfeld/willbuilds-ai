@@ -56,20 +56,20 @@ Add a record to `content/projects.json` and run `node build.mjs`. Required field
 | `category` | `projects` or `lab` |
 | `group` | Required when the category has groups. Projects are split into `mathlete` (Mathlete learning tools), `work` (work tools) and `personal` (personal assistant tools). Groups, their headings and blurbs are defined under `groups` in `content/site.json`, and each group appears as a folder in the Projects page's file tree |
 | `status` | `live`, `in-development`, `prototype`, `experimental`, `paused` or `archived` |
-| `description` | One or two sentences, shown at the top of the project page and in Featured on the homepage |
+| `description` | One or two sentences, shown at the top of the project page |
 
 Optional fields — any that are missing are simply left off the page:
 
 | Field | Notes |
 |---|---|
-| `featured` | `true` to show it on the homepage (up to 4) |
-| `summary` | A short one-liner for the compact rows on the Projects page; falls back to `description` |
+| `featured` | `true` to show it as a card on the homepage (up to 6) |
+| `summary` | A short one-liner for the homepage cards and the compact rows on the Projects page; falls back to `description` |
 | `overview` | List of paragraphs for the project page |
 | `problem`, `solution` | One paragraph each |
 | `details` | List of bullet points |
 | `tags` | Shown as `--tag`. A tag used by 2+ entries in a section becomes a filter button |
 | `technologies` | Shown as "built with" |
-| `thumbnail`, `thumbnailAlt` | e.g. `images/my-tool.png`; shown in lists and on the project page |
+| `thumbnail`, `thumbnailAlt` | e.g. `images/my-tool.png`; shown on the homepage card and the project page |
 | `liveUrl`, `sourceUrl` | Buttons on the project page |
 
 The build stops with a clear message if a required field is missing, a slug is duplicated, or a thumbnail file doesn't exist.
