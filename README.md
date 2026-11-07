@@ -54,7 +54,7 @@ Add a record to `content/projects.json` and run `node build.mjs`. Required field
 | `slug` | lowercase-with-dashes; becomes the URL, e.g. `/projects/my-tool/` |
 | `title` | Display name |
 | `category` | `projects` or `lab` |
-| `group` | Required when the category has groups. Projects are split into `mathlete` (Mathlete learning tools), `work` (work tools) and `personal` (personal assistant tools). Groups, their headings and blurbs are defined under `groups` in `content/site.json`, and each group appears as a folder in the Projects page's file tree |
+| `group` | Required when the category has groups. Projects are split into `mathlete` (Mathlete learning tools), `work` (work tools), `writing` (writing tools) and `personal` (personal assistant tools). Groups, their headings and blurbs are defined under `groups` in `content/site.json`, and each group appears as a folder in the Projects page's file tree |
 | `status` | `live`, `in-development`, `prototype`, `experimental`, `paused` or `archived` |
 | `description` | One or two sentences, shown at the top of the project page |
 
@@ -70,7 +70,7 @@ Optional fields — any that are missing are simply left off the page:
 | `tags` | Shown as `--tag`. A tag used by 2+ entries in a section becomes a filter button |
 | `technologies` | Shown as "built with" |
 | `thumbnail`, `thumbnailAlt` | e.g. `images/my-tool.png`; shown on the homepage card and the project page |
-| `liveUrl`, `sourceUrl` | Buttons on the project page |
+| `liveUrl`, `readmeUrl`, `sourceUrl` | Buttons on the project page (`readmeUrl` is for projects documented by a README page rather than a live app) |
 
 The build stops with a clear message if a required field is missing, a slug is duplicated, or a thumbnail file doesn't exist.
 

@@ -196,6 +196,7 @@ function projectPage(p) {
   const sectionHref = `${r}${p.category}/${group ? `#${group.key}` : ''}`;
   const links = [
     p.liveUrl && `<a class="btn btn--primary" href="${esc(p.liveUrl)}" target="_blank" rel="noopener">open live project →</a>`,
+    p.readmeUrl && `<a class="btn${p.liveUrl ? '' : ' btn--primary'}" href="${esc(p.readmeUrl)}" target="_blank" rel="noopener">read the readme →</a>`,
     p.sourceUrl && `<a class="btn" href="${esc(p.sourceUrl)}" target="_blank" rel="noopener">source code →</a>`,
   ].filter(Boolean);
   const meta = [

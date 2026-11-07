@@ -6,12 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light dark">
 <title>Projects — willbuilds.ai</title>
-<meta name="description" content="Mathlete learning tools — interactive math games from Algebra I through Calculus — plus HVAC design software and personal assistant tools I built and use.">
+<meta name="description" content="Mathlete learning tools — interactive math games from Algebra I through Calculus — plus HVAC design software, writing tools and personal assistant tools I built and use.">
 <link rel="canonical" href="https://willbuilds.ai/projects/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="willbuilds.ai">
 <meta property="og:title" content="Projects — willbuilds.ai">
-<meta property="og:description" content="Mathlete learning tools — interactive math games from Algebra I through Calculus — plus HVAC design software and personal assistant tools I built and use.">
+<meta property="og:description" content="Mathlete learning tools — interactive math games from Algebra I through Calculus — plus HVAC design software, writing tools and personal assistant tools I built and use.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@
   <header class="page-head">
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../">willbuilds.ai</a></li><li aria-current="page">projects</li></ol></nav>
     <h1 class="page-title">Projects</h1>
-    <p class="page-lede">Mathlete learning tools — interactive math games from Algebra I through Calculus — plus HVAC design software and personal assistant tools I built and use.</p>
+    <p class="page-lede">Mathlete learning tools — interactive math games from Algebra I through Calculus — plus HVAC design software, writing tools and personal assistant tools I built and use.</p>
   </header>
   <section class="listing" data-listing data-noun="project" data-nouns="projects" aria-label="Projects">
     <div class="list-tools" data-tools hidden>
@@ -54,14 +54,15 @@
     <div class="explorer">
       <nav class="tree" aria-label="Projects sections">
         <ul>
-          <li class="tree-root"><a href="#all" data-show=""><span class="tree-name">projects/</span><span class="tree-count">7</span></a></li>
+          <li class="tree-root"><a href="#all" data-show=""><span class="tree-name">projects/</span><span class="tree-count">8</span></a></li>
           <li><a href="#mathlete" data-show="mathlete"><span class="tree-name">mathlete/</span><span class="tree-count">4</span></a></li>
           <li><a href="#work" data-show="work"><span class="tree-name">work/</span><span class="tree-count">1</span></a></li>
+          <li><a href="#writing" data-show="writing"><span class="tree-name">writing/</span><span class="tree-count">1</span></a></li>
           <li><a href="#personal" data-show="personal"><span class="tree-name">personal/</span><span class="tree-count">2</span></a></li>
         </ul>
       </nav>
       <div class="explorer-main">
-        <p class="list-count" data-count aria-live="polite">7 projects</p>
+        <p class="list-count" data-count aria-live="polite">8 projects</p>
       <section class="proj-group" id="mathlete" data-group="mathlete" aria-labelledby="group-mathlete">
         <div class="group-head">
           <h2 class="group-title" id="group-mathlete"><span class="hash" aria-hidden="true"># </span>Mathlete learning tools</h2>
@@ -110,6 +111,21 @@
               <span class="status status--in-development"><span class="status-mark" aria-hidden="true"></span>in development</span>
             </div>
             <p class="proj-summary">Residential HVAC design, from floor plan to proposal, in one model.</p>
+          </li>
+        </ul>
+      </section>
+      <section class="proj-group" id="writing" data-group="writing" aria-labelledby="group-writing">
+        <div class="group-head">
+          <h2 class="group-title" id="group-writing"><span class="hash" aria-hidden="true"># </span>Writing tools</h2>
+          <p class="group-blurb">Tools for turning what I write into something people stop and read.</p>
+        </div>
+        <ul class="proj-list">
+          <li class="proj proj--compact" data-search="surface studio turns short writing into images of words on real surfaces. an open-source studio that turns short writing into images where the words look physically written, painted, printed or traced onto a real surface — made for substack notes and other feeds. writing image-generation social-media javascript canvas next.js sqlite esbuild text-on-image posts usually come out looking flat or, when an image model draws the words, misspelled. surface studio never lets an image model draw your text. type the words, pick a surface — brick, paper, a chalkboard, a fogged window and 57 more — choose how the words go on (spray, ink, chalk, paint, print and more), then pick a composition and export. every image is built from three independent layers: the scene, the typography and the material. they're merged only at the end, with perspective, bends, relief and lighting tying them together. editing the text never regenerates the scene, and changing the surface never touches the text. every render checks that the drawn characters match your text exactly, and export refuses to write a file if they don't. 61 surfaces, each rendering in four compositions, with text verified exact on every one — including punctuation, emoji, accents and cjk. controls for alignment, size and emphasis, material intensity and drips, lighting, mood and rotation. optional ai scene generation (openai, google imagen, replicate) produces a blank surface; you place the writing by dragging four corners. a framework-free rendering engine and studio ui, a single-file browser prototype, and a full-stack next.js app with sqlite storage. 27 unit tests, plus a headless chrome harness that renders every surface in every composition." data-tags="writing image-generation social-media">
+            <div class="proj-line">
+              <h3 class="proj-name"><a class="proj-title" href="../projects/surface-studio/"><span class="glyph" aria-hidden="true">&gt;</span>Surface Studio</a></h3>
+              <span class="status status--in-development"><span class="status-mark" aria-hidden="true"></span>in development</span>
+            </div>
+            <p class="proj-summary">Turns short writing into images of words on real surfaces.</p>
           </li>
         </ul>
       </section>

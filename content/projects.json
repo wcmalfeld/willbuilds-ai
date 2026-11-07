@@ -128,6 +128,30 @@
     "sourceUrl": "https://github.com/wcmalfeld/HVAC-Studio"
   },
   {
+    "slug": "surface-studio",
+    "title": "Surface Studio",
+    "category": "projects",
+    "group": "writing",
+    "status": "in-development",
+    "summary": "Turns short writing into images of words on real surfaces.",
+    "description": "An open-source studio that turns short writing into images where the words look physically written, painted, printed or traced onto a real surface — made for Substack Notes and other feeds.",
+    "overview": [
+      "Text-on-image posts usually come out looking flat or, when an image model draws the words, misspelled. Surface Studio never lets an image model draw your text. Type the words, pick a surface — brick, paper, a chalkboard, a fogged window and 57 more — choose how the words go on (spray, ink, chalk, paint, print and more), then pick a composition and export.",
+      "Every image is built from three independent layers: the scene, the typography and the material. They're merged only at the end, with perspective, bends, relief and lighting tying them together. Editing the text never regenerates the scene, and changing the surface never touches the text. Every render checks that the drawn characters match your text exactly, and export refuses to write a file if they don't."
+    ],
+    "details": [
+      "61 surfaces, each rendering in four compositions, with text verified exact on every one — including punctuation, emoji, accents and CJK.",
+      "Controls for alignment, size and emphasis, material intensity and drips, lighting, mood and rotation.",
+      "Optional AI scene generation (OpenAI, Google Imagen, Replicate) produces a blank surface; you place the writing by dragging four corners.",
+      "A framework-free rendering engine and studio UI, a single-file browser prototype, and a full-stack Next.js app with SQLite storage.",
+      "27 unit tests, plus a headless Chrome harness that renders every surface in every composition."
+    ],
+    "tags": ["writing", "image-generation", "social-media"],
+    "technologies": ["JavaScript", "Canvas", "Next.js", "SQLite", "esbuild"],
+    "readmeUrl": "https://wcmalfeld.github.io/surface-studio/",
+    "sourceUrl": "https://github.com/wcmalfeld/surface-studio"
+  },
+  {
     "slug": "the-notebook",
     "title": "The Notebook",
     "category": "projects",
