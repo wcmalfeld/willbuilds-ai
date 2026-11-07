@@ -62,7 +62,7 @@ Optional fields — any that are missing are simply left off the page:
 
 | Field | Notes |
 |---|---|
-| `featured` | `true` to show it as a card on the homepage (up to 6) |
+| `featured` | `true` to show it as a card on the homepage (up to 9; any beyond that are left off, in file order) |
 | `summary` | A short one-liner for the homepage cards and the compact rows on the Projects page; falls back to `description` |
 | `overview` | List of paragraphs for the project page |
 | `problem`, `solution` | One paragraph each |

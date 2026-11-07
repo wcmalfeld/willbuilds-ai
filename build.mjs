@@ -61,8 +61,8 @@ console.log(`built ${pages.length} pages + 404.html, sitemap.xml (${projects.len
 function homePage() {
   const r = '';
   const featured = projects.filter((p) => p.featured);
-  // Six fills the card grid evenly at both three and two columns.
-  const picks = (featured.length ? featured : inSection('projects')).slice(0, 6);
+  // Nine fills three full rows of the three-column card grid.
+  const picks = (featured.length ? featured : inSection('projects')).slice(0, 9);
   const recent = notes.slice(0, 3);
   const body = `
   <section class="term" aria-labelledby="intro-title">
