@@ -105,7 +105,7 @@ ${recent.map((n) => noteRow(n, r, 'h3')).join('\n')}
   return shell({
     path: '',
     title: site.title,
-    description: site.description,
+    description: featuredDescription(picks),
     head: `<script>
   /* The site used to be one page; send old #projects / #about links to the new pages. */
   (function () { var to = { '#projects': 'projects/', '#about': 'about/' }[location.hash]; if (to) location.replace(to); })();
@@ -409,6 +409,26 @@ function projectRow(p, r, h, { compact = false } = {}) {
         </div>${p.thumbnail ? `
         <img class="proj-thumb" src="${r}${esc(p.thumbnail)}" alt="" loading="lazy">` : ''}
       </li>`;
+}
+
+// The homepage description (what Google shows under the link) leads with the
+// featured projects in homepage order, then site.tagline. Names are added
+// while the whole thing stays within ~160 characters, Google's usual cutoff.
+function featuredDescription(picks) {
+  const tail = ` — ${site.tagline}`;
+  const names = [];
+  for (const p of picks) {
+    if (`${listJoin([...names, p.title])}${tail}`.length > 160) break;
+    names.push(p.title);
+  }
+  if (!names.length) return site.description;
+  const more = names.length < picks.length ? ' and more' : '';
+  return `${listJoin(names, !more)}${more}${tail}`;
+}
+
+function listJoin(items, useAnd = true) {
+  if (items.length < 2 || !useAnd) return items.join(', ');
+  return `${items.slice(0, -1).join(', ')} and ${items.at(-1)}`;
 }
 
 function projectCard(p, r) {

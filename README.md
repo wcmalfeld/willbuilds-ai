@@ -74,6 +74,10 @@ Optional fields — any that are missing are simply left off the page:
 
 The build stops with a clear message if a required field is missing, a slug is duplicated, or a thumbnail file doesn't exist.
 
+## Search engine description
+
+The homepage's description (the text Google usually shows under the link) is generated: it lists the featured projects in homepage order, followed by `tagline` from `content/site.json`. Names are added while the description stays within about 160 characters; any that don't fit become "and more". Feature or reorder projects, rebuild, and the description follows.
+
 ## Add a note
 
 Copy `content/notes/_template.md` to `content/notes/your-slug.md`, fill in the front matter (`title`, `date`, `summary`, `tags`) and write the body in Markdown. The first note makes Notes appear in the navigation and on the homepage.
