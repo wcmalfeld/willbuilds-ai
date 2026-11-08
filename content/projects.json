@@ -31,6 +31,7 @@
     "category": "projects",
     "group": "mathlete",
     "status": "live",
+    "featured": true,
     "summary": "Pick the gears, work the ratios, race the rival.",
     "description": "A race-mechanic game: students choose a chainring, wheel and cogs for each section of a mountain-bike course, work out the ratios, speeds and times, then race their setup against a rival's.",
     "overview": [
