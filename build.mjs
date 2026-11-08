@@ -215,6 +215,7 @@ ${meta.map(([k, v]) => `      <div><dt>${k}</dt><dd>${v}</dd></div>`).join('\n')
 ${readmeSection('overview', p.overview?.map((t) => `<p>${esc(t)}</p>`).join('\n'))}
 ${readmeSection('problem', p.problem && `<p>${esc(p.problem)}</p>`)}
 ${readmeSection('solution', p.solution && `<p>${esc(p.solution)}</p>`)}
+${readmeSection('how to use it', howToHtml(p.howTo))}
 ${readmeSection('details', p.details?.length && `<ul>${p.details.map((d) => `<li>${esc(d)}</li>`).join('')}</ul>`)}
 ${readmeSection('tags', tagList(p.tags))}
     <p class="back-link"><a href="${sectionHref}">← back to ${group ? esc(group.title.toLowerCase()) : section.title.toLowerCase()}</a></p>
@@ -391,7 +392,7 @@ function sectHead(id, cmd, title) {
 }
 
 function projectRow(p, r, h, { compact = false } = {}) {
-  const search = [p.title, p.summary, p.description, ...p.tags, ...(p.technologies || []), ...(p.overview || []), ...(p.details || [])]
+  const search = [p.title, p.summary, p.description, ...p.tags, ...(p.technologies || []), ...(p.overview || []), ...(p.details || []), ...(p.howTo?.steps || [])]
     .join(' ').toLowerCase();
   if (compact) {
     return `          <li class="proj proj--compact" data-search="${esc(search)}" data-tags="${esc(p.tags.join(' '))}">
@@ -453,6 +454,19 @@ function noteRow(n, r, h) {
           <div class="proj-meta">${n.date ? `<time class="status" datetime="${esc(n.date)}">${esc(n.date)}</time>` : ''}${tagList(n.tags)}</div>
         </div>
       </li>`;
+}
+
+// Optional "how to use it" section: { intro, setup: [commands], steps: [..], tryAlso: [..] }.
+// Every part is optional; with none of them the section is left out.
+function howToHtml(h) {
+  if (!h) return '';
+  return [
+    h.intro && `<p>${esc(h.intro)}</p>`,
+    h.setup?.length && `<pre class="howto-cmd"><code>${h.setup.map(esc).join('\n')}</code></pre>`,
+    h.steps?.length && `<ol class="howto-steps">${h.steps.map((s) => `<li>${esc(s)}</li>`).join('')}</ol>`,
+    h.tryAlso?.length && `<p class="howto-sub">other things to try</p>
+      <ul>${h.tryAlso.map((s) => `<li>${esc(s)}</li>`).join('')}</ul>`,
+  ].filter(Boolean).join('\n      ');
 }
 
 function readmeSection(title, html) {

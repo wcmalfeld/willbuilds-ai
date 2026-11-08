@@ -6,12 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light dark">
 <title>Projects — willbuilds.ai</title>
-<meta name="description" content="Mathlete learning tools — interactive math games from Algebra I through Calculus — plus HVAC design software, writing tools and personal assistant tools I built and use.">
+<meta name="description" content="Mathlete learning tools — interactive math games from Algebra I through Calculus — plus HVAC design software, small-business, writing and personal assistant tools I built and use.">
 <link rel="canonical" href="https://willbuilds.ai/projects/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="willbuilds.ai">
 <meta property="og:title" content="Projects — willbuilds.ai">
-<meta property="og:description" content="Mathlete learning tools — interactive math games from Algebra I through Calculus — plus HVAC design software, writing tools and personal assistant tools I built and use.">
+<meta property="og:description" content="Mathlete learning tools — interactive math games from Algebra I through Calculus — plus HVAC design software, small-business, writing and personal assistant tools I built and use.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@
   <header class="page-head">
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../">willbuilds.ai</a></li><li aria-current="page">projects</li></ol></nav>
     <h1 class="page-title">Projects</h1>
-    <p class="page-lede">Mathlete learning tools — interactive math games from Algebra I through Calculus — plus HVAC design software, writing tools and personal assistant tools I built and use.</p>
+    <p class="page-lede">Mathlete learning tools — interactive math games from Algebra I through Calculus — plus HVAC design software, small-business, writing and personal assistant tools I built and use.</p>
   </header>
   <section class="listing" data-listing data-noun="project" data-nouns="projects" aria-label="Projects">
     <div class="list-tools" data-tools hidden>
@@ -50,20 +50,22 @@
         <button class="chip" type="button" data-tag="" aria-pressed="true">all</button>
         <button class="chip" type="button" data-tag="game" aria-pressed="false">game</button>
         <button class="chip" type="button" data-tag="productivity" aria-pressed="false">productivity</button>
+        <button class="chip" type="button" data-tag="workflow-automation" aria-pressed="false">workflow-automation</button>
       </div>
     </div>
     <div class="explorer">
       <nav class="tree" aria-label="Projects sections">
         <ul>
-          <li class="tree-root"><a href="#all" data-show=""><span class="tree-name">projects/</span><span class="tree-count">9</span></a></li>
+          <li class="tree-root"><a href="#all" data-show=""><span class="tree-name">projects/</span><span class="tree-count">10</span></a></li>
           <li><a href="#mathlete" data-show="mathlete"><span class="tree-name">mathlete/</span><span class="tree-count">4</span></a></li>
           <li><a href="#work" data-show="work"><span class="tree-name">work/</span><span class="tree-count">1</span></a></li>
+          <li><a href="#business" data-show="business"><span class="tree-name">business/</span><span class="tree-count">1</span></a></li>
           <li><a href="#writing" data-show="writing"><span class="tree-name">writing/</span><span class="tree-count">1</span></a></li>
           <li><a href="#personal" data-show="personal"><span class="tree-name">personal/</span><span class="tree-count">3</span></a></li>
         </ul>
       </nav>
       <div class="explorer-main">
-        <p class="list-count" data-count aria-live="polite">9 projects</p>
+        <p class="list-count" data-count aria-live="polite">10 projects</p>
       <section class="proj-group" id="mathlete" data-group="mathlete" aria-labelledby="group-mathlete">
         <div class="group-head">
           <h2 class="group-title" id="group-mathlete"><span class="hash" aria-hidden="true"># </span>Mathlete learning tools</h2>
@@ -112,6 +114,21 @@
               <span class="status status--in-development"><span class="status-mark" aria-hidden="true"></span>in development</span>
             </div>
             <p class="proj-summary">Residential HVAC design, from floor plan to proposal, in one model.</p>
+          </li>
+        </ul>
+      </section>
+      <section class="proj-group" id="business" data-group="business" aria-labelledby="group-business">
+        <div class="group-head">
+          <h2 class="group-title" id="group-business"><span class="hash" aria-hidden="true"># </span>Business tools</h2>
+          <p class="group-blurb">Software for the day-to-day operations of small businesses.</p>
+        </div>
+        <ul class="proj-list">
+          <li class="proj proj--compact" data-search="relayops ai drafts the next step for each customer request; a person approves it. ai-assisted operations for small businesses: relayops takes in customer requests, classifies and summarizes them with an ai model, pulls up the relevant business records and proposes the next step — a reply, a service ticket, an appointment or a refund request — for a person to review, approve and execute. ai small-business workflow-automation next.js typescript postgresql zod vitest playwright small businesses lose hours sorting the same customer requests: where's my order, is my bike ready, can i book a tune-up. relayops reads each request, works out what it's about, finds the matching orders, customers and policies, and drafts the next step with every claim labelled as confirmed by records, supplied by the customer, an assumption or not available. it is deliberately not an autonomous agent. the ai can only propose one of seven fixed, schema-checked action types. application code decides the risk, a person executes, and high-risk actions also need an owner's approval that is bound to the exact values approved — change anything and the approval is void. every step lands in an append-only audit log. the demo business is summit cycles, a fictional bike shop, with a second fictional business, harbor kayak co., to show that each company's data is walled off. all data is fictional, and customer messages are simulated — nothing is emailed. seven typed actions: customer replies, service tickets, appointments, internal notes, status and assignment changes, and refund requests — which are drafts only, since no money moves. risk levels are defined in code, never by the model; workflow rules can add approval requirements but nothing can remove one. approvals are tied to a hash of the exact values, and the database refuses to execute anything without a matching approval. each proposal can run exactly once. row-level security in postgres separates businesses on every query; members see only requests assigned to them or unassigned. customer text is treated as untrusted: injection attempts are flagged, and drafts are checked against the retrieved records. works with a mock model by default, or anthropic and openai-compatible models. 74 vitest tests, many against a real postgres test database, plus playwright tests of the full request-to-audit workflow. sign in as priya, a front-desk member. the login page has one-click buttons for every demo account; all use the password relayops-demo-2026. open requests → new request. enter alex morgan, alex.morgan@example.com, the subject &quot;where is my order?&quot; and the message &quot;order sc-10421, when will it arrive?&quot;. leave &quot;classify and draft with ai&quot; checked and create it. on the request page, compare the original message with the ai interpretation: the category, how sure it is, and the order number it pulled out. &quot;business records found&quot; shows the order, customer and shipping policy it retrieved. review the &quot;send customer response&quot; proposal — the exact recipient, subject and body. edit it if you like (the ai's version is kept), then click &quot;send for approval&quot;. members can't approve their own proposals. sign out and sign in as maya, the owner. open approvals, choose the pending proposal, then &quot;review and decide&quot; → &quot;approve and execute&quot;. the reply appears under messages, labelled simulated, and the request is completed. the activity timeline and the business-wide audit log show every step, from received to executed." data-tags="ai small-business workflow-automation">
+            <div class="proj-line">
+              <h3 class="proj-name"><a class="proj-title" href="../projects/relayops/"><span class="glyph" aria-hidden="true">&gt;</span>RelayOps</a></h3>
+              <span class="status status--in-development"><span class="status-mark" aria-hidden="true"></span>in development</span>
+            </div>
+            <p class="proj-summary">AI drafts the next step for each customer request; a person approves it.</p>
           </li>
         </ul>
       </section>
