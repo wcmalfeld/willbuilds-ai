@@ -54,7 +54,7 @@ Add a record to `content/projects.json` and run `node build.mjs`. Required field
 | `slug` | lowercase-with-dashes; becomes the URL, e.g. `/projects/my-tool/` |
 | `title` | Display name |
 | `category` | `projects` or `lab` |
-| `group` | Required when the category has groups. Projects are split into `mathlete` (Mathlete learning tools), `work` (work tools), `business` (business tools), `writing` (writing tools) and `personal` (personal assistant tools). Groups, their headings and blurbs are defined under `groups` in `content/site.json`, and each group appears as a folder in the Projects page's file tree |
+| `group` | Required when the category has groups. Projects are split into `mathlete` (Mathlete learning tools), `work` (work tools), `business` (business tools), `volunteer` (volunteer team tools), `writing` (writing tools) and `personal` (personal assistant tools). Groups, their headings and blurbs are defined under `groups` in `content/site.json`, and each group appears as a folder in the Projects page's file tree |
 | `status` | `live`, `in-development`, `prototype`, `experimental`, `paused` or `archived` |
 | `description` | One or two sentences, shown at the top of the project page |
 

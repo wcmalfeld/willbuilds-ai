@@ -40,6 +40,11 @@
         "blurb": "Software for the day-to-day operations of small businesses."
       },
       {
+        "key": "volunteer",
+        "title": "Volunteer team tools",
+        "blurb": "Software for volunteer teams, starting with search and rescue."
+      },
+      {
         "key": "writing",
         "title": "Writing tools",
         "blurb": "Tools for turning what I write into something people stop and read."
@@ -52,7 +57,7 @@
     ]
   },
   "sections": {
-    "projects": "Mathlete learning tools — interactive math games from Algebra I through Calculus — plus HVAC design software, small-business, writing and personal assistant tools I built and use.",
+    "projects": "Mathlete learning tools — interactive math games from Algebra I through Calculus — plus HVAC design software, small-business, volunteer-team, writing and personal assistant tools I built and use.",
     "lab": "Prototypes and experiments — ideas with a working implementation that aren't finished products yet.",
     "notes": "Writing on building software, AI and teaching."
   }
