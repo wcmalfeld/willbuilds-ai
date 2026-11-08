@@ -152,6 +152,35 @@
     "sourceUrl": "https://github.com/wcmalfeld/surface-studio"
   },
   {
+    "slug": "tend",
+    "title": "Tend",
+    "category": "projects",
+    "group": "personal",
+    "status": "in-development",
+    "featured": true,
+    "summary": "An iPhone app for habits, tasks and goals in one daily view.",
+    "description": "A native iPhone app for habits, tasks and goals: one Today view shows the week's progress, every habit and the day's tasks, with streaks that follow your actual schedule.",
+    "overview": [
+      "Most habit apps treat every habit as a daily checkbox. Tend handles the way habits actually work: drink 8 glasses of water, meditate 10 minutes, work out 3 times a week, or quit something entirely. The Today view puts a week strip with completion rings, a progress summary, every habit card and the day's tasks on one screen, with undo on everything.",
+      "All of the habit logic lives in a standalone, unit-tested Swift engine. Statuses and streaks are recomputed from the full history every time, so editing a past day always updates every number. Days are stored as calendar days rather than timestamps, so daylight saving time and travel never shift your history."
+    ],
+    "details": [
+      "Five habit types: check-off, amount, times per period, measurement and quit.",
+      "Flexible schedules — daily, weekdays, every N days, N times a week or month — with partial, skipped and paused days that each affect streaks differently.",
+      "A library of 121 habit templates to search, preview and customize.",
+      "Tasks with lists, due dates, priorities, recurrence, reminders and drag-to-reorder.",
+      "A calendar with habit rings and task dots on every day.",
+      "Multiple reminders per habit that fire only on scheduled days; JSON export and import.",
+      "29 unit tests on the habit engine cover time zones, daylight saving time, weekly streaks, pauses, rule changes and relapses.",
+      "Coming soon on TestFlight."
+    ],
+    "tags": ["productivity", "habits", "ios", "personal-development"],
+    "technologies": ["Swift", "SwiftUI", "SwiftData", "iOS 17"],
+    "thumbnail": "images/tend.png",
+    "thumbnailAlt": "Tend's Today screen on an iPhone: a week strip with completion rings, 45% of the day done, and habit cards for drinking water, meditating, reading and working out",
+    "sourceUrl": "https://github.com/wcmalfeld/Tend"
+  },
+  {
     "slug": "the-notebook",
     "title": "The Notebook",
     "category": "projects",
